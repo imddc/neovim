@@ -30,8 +30,7 @@ return require('packer').startup(function(use)
                 'kyazdani42/nvim-web-devicons', opt = true
             } -- 状态栏图标
         }
-        -- 平滑滚动
-        use { "karb94/neoscroll.nvim" }
+
         use {
             'nvim-tree/nvim-tree.lua', -- 文档树
             requires = {
@@ -43,20 +42,20 @@ return require('packer').startup(function(use)
         use 'nvim-treesitter/nvim-treesitter' -- 语法高亮
         use 'p00f/nvim-ts-rainbow' -- 配合treesitter 不同括号颜色区分
 
-        use {
-            'williamboman/mason.nvim',
-            'williamboman/mason-lspconfig.nvim', -- 语法提示
-            'neovim/nvim-lspconfig',
-        }
+        use { 'neovim/nvim-lspconfig' }
 
 
         -- 语法补全
-        use 'hrsh7th/nvim-cmp'
-        use 'hrsh7th/cmp-nvim-lsp'
+        use { 'hrsh7th/nvim-cmp', config = [[require('config.nvim-cmp')]] }
+        use { 'hrsh7th/cmp-nvim-lsp' }
+        use { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' } -- buffer auto-completion
+        use { 'hrsh7th/cmp-path', after = 'nvim-cmp' } -- buffer auto-completion
+        use { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp' } -- buffer auto-completion
         use 'L3MON4D3/LuaSnip'
         use 'saadparwaiz1/cmp_luasnip'
-        use "rafamadriz/friendly-snippets"
-        use 'hrsh7th/cmp-path'
+
+        use { 'williamboman/mason.nvim' }
+        use { 'williamboman/mason-lspconfig.nvim' } 
 
         -- gcc 和gc 注释
         use {
@@ -65,8 +64,8 @@ return require('packer').startup(function(use)
                 require('Comment').setup()
             end
         }
-        use 'windwp/nvim-autopairs' -- 自动补全括号
 
+        use 'windwp/nvim-autopairs' -- 自动补全括号
         use 'akinsho/bufferline.nvim' -- buffer 分割线
         use 'lewis6991/gitsigns.nvim' -- 左侧git提示
 
