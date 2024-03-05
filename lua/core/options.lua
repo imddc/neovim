@@ -11,11 +11,14 @@ opt.expandtab = true
 
 -- UI config
 opt.number = true
-opt.relativenumber = true
 opt.cursorline = true
+--默认新窗口右和下
 opt.splitbelow = true
 opt.splitright = true
 opt.showmode = false
+-- 终端真颜色
+opt.relativenumber = true
+opt.signcolumn = 'yes'
 
 -- Searching
 opt.incsearch = true

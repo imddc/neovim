@@ -9,6 +9,7 @@ local keymap = vim.keymap
 keymap.set('i', 'jk', '<ESC>')
 keymap.set('i', 'jj', '<ESC>')
 keymap.set('i', 'jk', '<ESC>')
+keymap.set('i', 'kk', '<ESC>')
 
 -- Hint: see `:h vim.map.set()`
 -- Better window navigation
@@ -34,7 +35,7 @@ keymap.set('n', '<leader>sh', "<C-w>s")
 keymap.set('n', '<leader>nh', ":nohl<CR>")
 
 -- nvim-tree
-keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>')
+keymap.set('n', '<leader>;', ':NvimTreeToggle<CR>')
 
 
 -- 切换buffer

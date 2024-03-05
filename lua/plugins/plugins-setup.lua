@@ -24,18 +24,21 @@ return require('packer').startup(function(use)
         use 'wbthomason/packer.nvim'
 
         use 'tanvirtin/monokai.nvim' -- 主题
-        use {
-            'nvim-lualine/lualine.nvim', -- 状态栏
-            requires = { 
-                'kyazdani42/nvim-web-devicons', opt = true
-            } -- 状态栏图标
-        }
 
         use {
-            'nvim-tree/nvim-tree.lua', -- 文档树
-            requires = {
-                'nvim-tree/nvim-web-devicons', -- 文档树图标
-            }
+          'nvim-lualine/lualine.nvim',
+          requires = { 
+              'nvim-tree/nvim-web-devicons', 
+              opt = true 
+          }
+        }
+
+        -- 文档树
+        use {
+          'nvim-tree/nvim-tree.lua',
+          requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+          },
         }
 
         use 'christoomey/vim-tmux-navigator'  -- 用 ctrl + hjkl 定位窗口
