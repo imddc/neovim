@@ -1,0 +1,85 @@
+local ensure_packer = function()
+    local fn = vim.fn
+    local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+    if fn.empty(fn.glob(install_path)) > 0 then
+        fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
+        vim.cmd [[packadd packer.nvim]]
+        return true
+    end
+    return false
+end
+local packer_bootstrap = ensure_packer()
+
+
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]])
+
+
+return require('packer').startup(function(use)
+        -- Packer can manage itself
+        use 'wbthomason/packer.nvim'
+
+        use 'tanvirtin/monokai.nvim' -- 主题
+        use {
+            'nvim-lualine/lualine.nvim', -- 状态栏
+            requires = { 
+                'kyazdani42/nvim-web-devicons', opt = true
+            } -- 状态栏图标
+        }
+        -- 平滑滚动
+        use { "karb94/neoscroll.nvim" }
+        use {
+            'nvim-tree/nvim-tree.lua', -- 文档树
+            requires = {
+                'nvim-tree/nvim-web-devicons', -- 文档树图标
+            }
+        }
+
+        use 'christoomey/vim-tmux-navigator'  -- 用 ctrl + hjkl 定位窗口
+        use 'nvim-treesitter/nvim-treesitter' -- 语法高亮
+        use 'p00f/nvim-ts-rainbow' -- 配合treesitter 不同括号颜色区分
+
+        use {
+            'williamboman/mason.nvim',
+            'williamboman/mason-lspconfig.nvim', -- 语法提示
+            'neovim/nvim-lspconfig',
+        }
+
+
+        -- 语法补全
+        use 'hrsh7th/nvim-cmp'
+        use 'hrsh7th/cmp-nvim-lsp'
+        use 'L3MON4D3/LuaSnip'
+        use 'saadparwaiz1/cmp_luasnip'
+        use "rafamadriz/friendly-snippets"
+        use 'hrsh7th/cmp-path'
+
+        -- gcc 和gc 注释
+        use {
+            'numToStr/Comment.nvim',
+            config = function()
+                require('Comment').setup()
+            end
+        }
+        use 'windwp/nvim-autopairs' -- 自动补全括号
+
+        use 'akinsho/bufferline.nvim' -- buffer 分割线
+        use 'lewis6991/gitsigns.nvim' -- 左侧git提示
+
+        use 'nvim-lua/plenary.nvim'
+
+
+        use {
+          'nvim-telescope/telescope.nvim', tag = '0.1.5',
+          requires = { {'nvim-lua/plenary.nvim'} }
+        }
+
+        -- Put this at the end after all plugins
+        if packer_bootstrap then
+            require('packer').sync()
+        end
+    end)
