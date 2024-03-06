@@ -26,6 +26,12 @@ return require('packer').startup(function(use)
     -- 主题
     use 'tanvirtin/monokai.nvim' 
     use 'folke/tokyonight.nvim' 
+    use {
+        'svrana/neosolarized.nvim',
+        requires = {
+            'tjdevries/colorbuddy.nvim'
+        }
+    }
 
     -- 状态栏
     use {

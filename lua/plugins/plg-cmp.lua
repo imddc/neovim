@@ -29,12 +29,7 @@ cmp.setup({
         -- Use <C-k/j> to switch in items
         ['<C-k>'] = cmp.mapping.select_prev_item(),
         ['<C-j>'] = cmp.mapping.select_next_item(),
-        -- Use <CR>(Enter) to confirm selection
-        -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
-
-        -- A super tab
-        -- sourc: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
         ["<Tab>"] = cmp.mapping(function(fallback)
             -- Hint: if the completion menu is visible select next one
             if cmp.visible() then
