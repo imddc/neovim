@@ -32,19 +32,20 @@ return require('packer').startup(function(use)
   }
 
   -- font
-  use "nvim-tree/nvim-web-devicons"
+  use "kyazdani42/nvim-web-devicons"
 
   -- 文档树
   use {
     "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    requires = { 
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-    },
+      branch = "v3.x",
+      requires = { 
+        "nvim-lua/plenary.nvim",
+        "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+        "MunifTanjim/nui.nvim",
+        -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+      }
   }
-  -- neo-tree over
+
   use 'christoomey/vim-tmux-navigator'  -- 用 ctrl + hjkl 定位窗口
   use 'p00f/nvim-ts-rainbow' -- 配合treesitter 不同括号颜色区分
 
@@ -58,7 +59,7 @@ return require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig' -- LSP
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdata'
+    run = ':TSUpdate'
   } -- 语法高亮
 
   use 'windwp/nvim-autopairs' -- 自动补全括号
