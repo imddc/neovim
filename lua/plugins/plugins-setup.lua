@@ -20,68 +20,97 @@ vim.cmd([[
 
 
 return require('packer').startup(function(use)
-        -- Packer can manage itself
-        use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-        use 'tanvirtin/monokai.nvim' -- 主题
+    -- 主题
+    use 'tanvirtin/monokai.nvim' 
+    use 'folke/tokyonight.nvim' 
 
-        use {
-          'nvim-lualine/lualine.nvim',
-          requires = { 
-              'nvim-tree/nvim-web-devicons', 
-              opt = true 
-          }
-        }
+    -- 状态栏
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 
+          'nvim-tree/nvim-web-devicons', 
+          opt = true 
+      }
+    }
 
-        -- 文档树
-        use {
-          'nvim-tree/nvim-tree.lua',
-          requires = {
-            'nvim-tree/nvim-web-devicons', -- optional
-          },
-        }
+    use "nvim-tree/nvim-web-devicons" -- not strictly required, but recommended
 
-        use 'christoomey/vim-tmux-navigator'  -- 用 ctrl + hjkl 定位窗口
-        use 'nvim-treesitter/nvim-treesitter' -- 语法高亮
-        use 'p00f/nvim-ts-rainbow' -- 配合treesitter 不同括号颜色区分
-
-        use { 'neovim/nvim-lspconfig' }
-
-
-        -- 语法补全
-        use { 'hrsh7th/nvim-cmp', config = [[require('config.nvim-cmp')]] }
-        use { 'hrsh7th/cmp-nvim-lsp' }
-        use { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' } -- buffer auto-completion
-        use { 'hrsh7th/cmp-path', after = 'nvim-cmp' } -- buffer auto-completion
-        use { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp' } -- buffer auto-completion
-        use 'L3MON4D3/LuaSnip'
-        use 'saadparwaiz1/cmp_luasnip'
-
-        use { 'williamboman/mason.nvim' }
-        use { 'williamboman/mason-lspconfig.nvim' } 
-
-        -- gcc 和gc 注释
-        use {
-            'numToStr/Comment.nvim',
+    -- 文档树
+    use {
+      "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        requires = { 
+          "nvim-lua/plenary.nvim",
+          "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+          "MunifTanjim/nui.nvim",
+          {
+            's1n7ax/nvim-window-picker',
+            version = '2.*',
             config = function()
-                require('Comment').setup()
-            end
-        }
+                require 'window-picker'.setup({
+                    filter_rules = {
+                        include_current_win = false,
+                        autoselect_one = true,
+                        -- filter using buffer options
+                        bo = {
+                            -- if the file type is one of following, the window will be ignored
+                            filetype = { 'neo-tree', "neo-tree-popup", "notify" },
+                            -- if the buffer type is one of following, the window will be ignored
+                            buftype = { 'terminal', "quickfix" },
+                        },
+                },
+            })
+            end,
+          },
+        },
+    }
+    -- neo-tree over
 
-        use 'windwp/nvim-autopairs' -- 自动补全括号
-        use 'akinsho/bufferline.nvim' -- buffer 分割线
-        use 'lewis6991/gitsigns.nvim' -- 左侧git提示
+    use 'christoomey/vim-tmux-navigator'  -- 用 ctrl + hjkl 定位窗口
+    use 'nvim-treesitter/nvim-treesitter' -- 语法高亮
+    use 'p00f/nvim-ts-rainbow' -- 配合treesitter 不同括号颜色区分
 
-        use 'nvim-lua/plenary.nvim'
+    use { 'neovim/nvim-lspconfig' }
 
 
-        use {
-          'nvim-telescope/telescope.nvim', tag = '0.1.5',
-          requires = { {'nvim-lua/plenary.nvim'} }
-        }
+    -- 语法补全
+    use { 'hrsh7th/nvim-cmp', config = [[require('config.nvim-cmp')]] }
+    use { 'hrsh7th/cmp-nvim-lsp' }
+    use { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' } -- buffer auto-completion
+    use { 'hrsh7th/cmp-path', after = 'nvim-cmp' } -- buffer auto-completion
+    use { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp' } -- buffer auto-completion
+    use 'L3MON4D3/LuaSnip'
+    use 'saadparwaiz1/cmp_luasnip'
 
-        -- Put this at the end after all plugins
-        if packer_bootstrap then
-            require('packer').sync()
+    use { 'williamboman/mason.nvim' }
+    use { 'williamboman/mason-lspconfig.nvim' } 
+
+    -- gcc 和gc 注释
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
         end
-    end)
+    }
+
+    use 'windwp/nvim-autopairs' -- 自动补全括号
+    use 'akinsho/bufferline.nvim' -- buffer 分割线
+    use 'lewis6991/gitsigns.nvim' -- 左侧git提示
+
+    use 'nvim-lua/plenary.nvim'
+
+
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.5',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    -- Put this at the end after all plugins
+    if packer_bootstrap then
+        require('packer').sync()
+    end
+end
+)

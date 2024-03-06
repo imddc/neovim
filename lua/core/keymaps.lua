@@ -35,7 +35,7 @@ keymap.set('n', '<leader>sh', "<C-w>s")
 keymap.set('n', '<leader>nh', ":nohl<CR>")
 
 -- nvim-tree
-keymap.set('n', '<leader>;', ':NvimTreeToggle<CR>')
+keymap.set('n', '<leader>;', ':Neotree<CR>')
 
 
 -- 切换buffer
