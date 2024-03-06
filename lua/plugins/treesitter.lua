@@ -1,21 +1,27 @@
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = { 
-      "vim", 
-      "rust", 
-      "lua", 
-      "javascript", 
-      "typescript", 
-      "vue", 
-      "css", 
-      "json", 
-      "python",
-  },
+local status, ts = pcall(require, 'nvim-treesitter.configs')
+if (not status) then return end
+
+ts.setup {
   highlight = {
     enable = true,
+    disable = {},
   },
-  rainbow = {
-      enable = true,
-      extended_mode = true,
-      max_file_lines = nil,
+  indent = {
+    enable = true,
+    disable = {},
   },
+  ensure_installed = {
+    'vim',
+    'rust',
+    'lua',
+    'javascript',
+    'typescript',
+    'tsx',
+    'vue',
+    'css',
+    'json'
+  },
+  autotag = {
+    enable = true
+  }
 }
