@@ -15,14 +15,13 @@ require("neo-tree").setup({
   enable_normal_mode_for_inputs = false, -- Enable normal mode for input dialogs.
   open_files_do_not_replace_types = { "terminal", "trouble", "qf" }, -- when opening files, do not use windows containing these filetypes or buftypes
   sort_case_insensitive = false, -- used when sorting files and directories in the tree
-  sort_function = nil , -- use a custom function for sorting files and directories in the tree 
-  -- sort_function = function (a,b)
-  --       if a.type == b.type then
-  --           return a.path > b.path
-  --       else
-  --           return a.type > b.type
-  --       end
-  --   end , -- this sorts files and directories descendantly
+  sort_function = function (a,b)
+        if a.type == b.type then
+            return a.path > b.path
+        else
+            return a.type > b.type
+        end
+  end , -- this sorts files and directories descendantly
   default_component_configs = {
     container = {
       enable_character_fade = true
@@ -113,6 +112,7 @@ require("neo-tree").setup({
       },
       ["<2-LeftMouse>"] = "open",
       ["<cr>"] = "open",
+      ["w"] = "open",
       ["<esc>"] = "cancel", -- close preview or floating neo-tree window
       ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
       -- Read `# Preview Mode` for more information
@@ -124,7 +124,6 @@ require("neo-tree").setup({
       ["t"] = "open_tabnew",
       -- ["<cr>"] = "open_drop",
       -- ["t"] = "open_tab_drop",
-      ["w"] = "open_with_window_picker",
       --["P"] = "toggle_preview", -- enter preview mode, which shows the current node without focusing
       ["C"] = "close_node",
       -- ['C'] = 'close_all_subnodes',
