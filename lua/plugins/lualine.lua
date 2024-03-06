@@ -28,7 +28,11 @@ require('lualine').setup {
     inactive_sections = {
       lualine_a = {},
       lualine_b = {},
-      lualine_c = {'filename'},
+      lualine_c = {{
+          'filename', 
+          file_statue = true,
+          path = 1 -- 1 = relative path 
+      }},
       lualine_x = {'location'},
       lualine_y = {},
       lualine_z = {}
