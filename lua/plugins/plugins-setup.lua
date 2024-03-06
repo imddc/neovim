@@ -24,8 +24,8 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- 主题
-    use 'tanvirtin/monokai.nvim' 
-    use 'folke/tokyonight.nvim' 
+    use 'tanvirtin/monokai.nvim'
+    use 'folke/tokyonight.nvim'
     use {
         'svrana/neosolarized.nvim',
         requires = {
@@ -33,16 +33,8 @@ return require('packer').startup(function(use)
         }
     }
 
-    -- 状态栏
-    use {
-      'nvim-lualine/lualine.nvim',
-      requires = { 
-          'nvim-tree/nvim-web-devicons', 
-          opt = true 
-      }
-    }
-
-    use "nvim-tree/nvim-web-devicons" -- not strictly required, but recommended
+    -- font
+    use "nvim-tree/nvim-web-devicons"
 
     -- 文档树
     use {
@@ -57,24 +49,30 @@ return require('packer').startup(function(use)
     -- neo-tree over
 
     use 'christoomey/vim-tmux-navigator'  -- 用 ctrl + hjkl 定位窗口
-    use 'nvim-treesitter/nvim-treesitter' -- 语法高亮
     use 'p00f/nvim-ts-rainbow' -- 配合treesitter 不同括号颜色区分
 
-    use { 'neovim/nvim-lspconfig' }
 
 
     -- 语法补全
-    use { 'hrsh7th/nvim-cmp', config = [[require('config.nvim-cmp')]] }
-    use { 'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp' }
-    use { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' } -- buffer auto-completion
-    use { 'hrsh7th/cmp-path', after = 'nvim-cmp' } -- path auto-completion
-    use { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp' } -- cmdline auto-completion
-    use 'L3MON4D3/LuaSnip'
+    use 'L3MON4D3/LuaSnip' -- snippet
+    use 'hoob3rt/lualine.nvim' --statusline
+    use 'onsails/lspkind-nvim' --vscode-like pictograms
+    use 'hrsh7th/cmp-buffer' --nvim-cmp source for buffer words
+    use 'hrsh7th/cmp-nvim-lsp' --nvim-cmp source for neovim's build
+    use 'hrsh7th/nvim-cmp' --Completion
+    use 'neovim/nvim-lspconfig' -- LSP
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdata'
+    } -- 语法高亮
+
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
     use 'saadparwaiz1/cmp_luasnip'
 
     -- lsp
     use { 'williamboman/mason.nvim' }
-    use { 'williamboman/mason-lspconfig.nvim' } 
+    use { 'williamboman/mason-lspconfig.nvim' }
 
     -- gcc 和gc 注释
     use {

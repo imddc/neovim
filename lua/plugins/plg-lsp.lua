@@ -54,7 +54,6 @@ local on_attach = function(client, bufnr)
     end
 end
 
-
 nvim_lsp.tsserver.setup({
     on_attach = on_attach,
     filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },
@@ -69,7 +68,8 @@ nvim_lsp.lua_ls.setup({
                 globals = { 'vim' }
             },
             workspace = {
-                library = vim.api.nvim_get_runtime_file('', true)
+                library = vim.api.nvim_get_runtime_file('', true),
+                checkThirdParty = false,
             }
         }
     }
