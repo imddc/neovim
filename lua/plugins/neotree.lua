@@ -17,9 +17,9 @@ require("neo-tree").setup({
   sort_case_insensitive = false, -- used when sorting files and directories in the tree
   sort_function = function (a,b)
         if a.type == b.type then
-            return a.path > b.path
+            return a.path < b.path
         else
-            return a.type > b.type
+            return a.type < b.type
         end
   end , -- this sorts files and directories descendantly
   default_component_configs = {
@@ -73,7 +73,6 @@ require("neo-tree").setup({
         conflict  = "",
       }
     },
-    -- If you don't want to use these columns, you can set `enabled = false` for each of them individually
     file_size = {
       enabled = true,
       required_width = 64, -- min width of window required to show this column
@@ -94,9 +93,6 @@ require("neo-tree").setup({
       enabled = false,
     },
   },
-  -- A list of functions, each representing a global custom command
-  -- that will be available in all sources (if not overridden in `opts[source_name].commands`)
-  -- see `:h neo-tree-custom-commands-global`
   commands = {},
   window = {
     position = "left",
@@ -115,12 +111,9 @@ require("neo-tree").setup({
       ["w"] = "open",
       ["<esc>"] = "cancel", -- close preview or floating neo-tree window
       ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
-      -- Read `# Preview Mode` for more information
       ["l"] = "focus_preview",
       ["S"] = "open_split",
       ["s"] = "open_vsplit",
-      -- ["S"] = "split_with_window_picker",
-      -- ["s"] = "vsplit_with_window_picker",
       ["t"] = "open_tabnew",
       -- ["<cr>"] = "open_drop",
       -- ["t"] = "open_tab_drop",
@@ -177,8 +170,6 @@ require("neo-tree").setup({
         --".gitignored",
       },
       never_show = { -- remains hidden even if visible is toggled to true, this overrides always_show
-        --".DS_Store",
-        --"thumbs.db"
       },
       never_show_by_pattern = { -- uses glob style patterns
         --".null-ls_*",
@@ -242,13 +233,6 @@ require("neo-tree").setup({
         ["bd"] = "buffer_delete",
         ["<bs>"] = "navigate_up",
         ["."] = "set_root",
-        ["o"] = { "show_help", nowait=false, config = { title = "Order by", prefix_key = "o" }},
-        ["oc"] = { "order_by_created", nowait = false },
-        ["od"] = { "order_by_diagnostics", nowait = false },
-        ["om"] = { "order_by_modified", nowait = false },
-        ["on"] = { "order_by_name", nowait = false },
-        ["os"] = { "order_by_size", nowait = false },
-        ["ot"] = { "order_by_type", nowait = false },
       }
     },
   },

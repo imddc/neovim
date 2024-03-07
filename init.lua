@@ -1,19 +1,22 @@
 require('plugins.plugins-setup')
 
 require('core.options')
-require('core.colorschema')
 require('core.keymaps')
+require('core.colorschema')
 
--- require('plugins.plg-icons')
 require('plugins.lualine')
+require('plugins.neotree')
+
+require('plugins.lspconfig')
+require('plugins.cmpconfig')
 require('plugins.lspkind')
 require('plugins.treesitter')
-require('plugins.neotree')
-require('plugins.plg-cmp')
-require('plugins.lspconfig')
+require('plugins.autopaires')
+require('plugins.ts-autotag')
+
+require('plugins.telescope')
 require('plugins.bufferline')
 require('plugins.gitsigns')
-require('plugins.telescope')
 
 -- local has = function(x)
 --   return vim.fn.has(x) == 1
