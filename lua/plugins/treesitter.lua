@@ -1,15 +1,10 @@
-local status, ts = pcall(require, 'nvim-treesitter.configs')
-if (not status) then return end
+local status, treesitter = pcall(require, 'nvim-treesitter.configs')
+if (not status) then
+  print('treesitter is not work!')
+  return
+end
 
-ts.setup {
-  highlight = {
-    enable = true,
-    disable = {},
-  },
-  indent = {
-    enable = true,
-    disable = {},
-  },
+treesitter.setup({
   ensure_installed = {
     'vim',
     'rust',
@@ -21,7 +16,21 @@ ts.setup {
     'css',
     'json'
   },
+  highlight = {
+    enable = true,
+    addition_vim_regex_highlight = false,
+  },
+  indent = {
+    enable = true,
+    disable = {},
+  },
   autotag = {
     enable = true
-  }
-}
+  },
+})
+
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.wo.foldlevel = 99
+
+vim.keymap.set("n", "<leader>i", "gg=G")
