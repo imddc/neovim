@@ -1,24 +1,7 @@
 local status, nvim_lsp = pcall(require, 'lspconfig')
 if (not status) then return end
 
-local protocol = require('vim.lsp.protocol')
-local mason = require('mason')
-local mason_lspconfig = require('mason')
-
-mason.setup({
-    ui = {
-        icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗"
-        }
-    }
-})
-mason_lspconfig.setup({
-    ensure_installed = { 'pylsp', 'lua_ls', 'rust_analyzer' },
-})
-
-local on_attach = function(client, bufnr)
+local on_attach = function(client)
     if client.server_capabilities.documentFormattingProvider then
         vim.api.nvim_command [[augroup Format]]
         vim.api.nvim_command [[augroup! * <buffer>]]

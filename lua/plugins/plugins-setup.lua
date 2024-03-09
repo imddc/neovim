@@ -62,6 +62,8 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   } -- 语法高亮
+  use 'jose-elias-alvarez/null-ls.nvim' -- use neovim as a alanguage server
+  use 'MunifTanjim/prettier.nvim' -- prettier plugin
 
   use 'windwp/nvim-autopairs' -- 自动补全括号
   use 'windwp/nvim-ts-autotag' -- ts 自动补全括号

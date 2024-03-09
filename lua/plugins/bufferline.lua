@@ -23,7 +23,7 @@ bufferline.setup({
     },
     background = {
       guifg = '#657b83',
-      guibg = '#002b36'
+      guibg = '#ff0000'
     },
     buffer_selected = {
       guifg = '#fdf6e3',
