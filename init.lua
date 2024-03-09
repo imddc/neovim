@@ -16,6 +16,8 @@ require('plugins.ts-autotag')
 
 require('plugins.telescope')
 require('plugins.bufferline')
+require('plugins.colorizer')
+require('plugins.lspsaga')
 require('plugins.gitsigns')
 
 -- local has = function(x)

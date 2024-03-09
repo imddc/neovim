@@ -50,6 +50,7 @@ return require('packer').startup(function(use)
   use 'p00f/nvim-ts-rainbow' -- 配合treesitter 不同括号颜色区分
 
   -- 语法补全
+  use 'nvimdev/lspsaga.nvim' --LSP UI
   use 'L3MON4D3/LuaSnip' -- snippet
   use 'hoob3rt/lualine.nvim' --statusline
   use 'onsails/lspkind-nvim' --vscode-like pictograms
@@ -86,6 +87,7 @@ return require('packer').startup(function(use)
   }
 
   use 'akinsho/bufferline.nvim' -- buffer 分割线
+  use 'norcalli/nvim-colorizer'
   use 'lewis6991/gitsigns.nvim' -- 左侧git提示
 
   -- Put this at the end after all plugins
