@@ -61,6 +61,7 @@ lazy.setup({
   'nvim-treesitter/nvim-treesitter',
   'windwp/nvim-autopairs',                  -- 自动补全括号
   'windwp/nvim-ts-autotag',                 -- ts 自动补全括号
+  'axelvc/template-string.nvim',
   "roobert/tailwindcss-colorizer-cmp.nvim", -- tailwind自动补全
   'mg979/vim-visual-multi',                 -- 多光标
   'hrsh7th/cmp-path',                       -- cmp 相关
