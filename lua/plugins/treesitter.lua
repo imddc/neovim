@@ -1,51 +1,35 @@
 local status, treesitter = pcall(require, 'nvim-treesitter.configs')
 if (not status) then
-  print('treesitter is not work!')
+  print('treesitter is not working!')
   return
 end
 
 treesitter.setup({
   ensure_installed = {
-    "c",
-    'css',
     'javascript',
-    'json',
-    "lua",
-    'rust',
-    'tsx',
     'typescript',
+    'javascript',
+    'html',
+    'css',
+    'json',
+    'graphql',
+    'regex',
+    'rust',
+    'prisma',
+    'markdown',
+    'markdown_inline',
+    'tsx',
     "vim",
-    "vimdoc",
-    'vim',
+    "lua",
     'vue',
   },
   sync_install = false,
   auto_install = true,
   highlight = {
     enable = true,
-    disable = {},
     additional_vim_regex_highlighting = false,
   },
+  autotag = {
+    enable = true
+  },
 })
-
--- treesitter.setup({
---   ensure_installed = {
---   },
---   highlight = {
---     enable = true,
---     addition_vim_regex_highlight = false,
---   },
---   indent = {
---     enable = true,
---     disable = {},
---   },
---   autotag = {
---     enable = true
---   },
--- })
-
-vim.wo.foldmethod = 'expr'
-vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
-vim.wo.foldlevel = 99
-
-vim.keymap.set("n", "<leader>i", "gg=G")
