@@ -1,100 +1,75 @@
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
-    vim.cmd [[packadd packer.nvim]]
-    return true
-  end
-  return false
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
-local packer_bootstrap = ensure_packer()
+vim.opt.rtp:prepend(lazypath)
 
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]])
+local status, lazy = pcall(require, 'lazy')
+if (not status) then
+  print('lazy is not work!')
+  return
+end
 
-return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-
-  -- 主题
-  use 'tanvirtin/monokai.nvim'
-  use 'folke/tokyonight.nvim'
-  use {
-    'svrana/neosolarized.nvim',
-    requires = {
-      'tjdevries/colorbuddy.nvim'
-    }
-  }
-
-  -- font
-  use "kyazdani42/nvim-web-devicons"
-
-  -- 文档树
-  use {
+lazy.setup({
+  'sainnhe/everforest',
+  'williamboman/mason.nvim',
+  'williamboman/mason-lspconfig.nvim',
+  'neovim/nvim-lspconfig',
+  'WhoIsSethDaniel/mason-tool-installer.nvim',
+  {
+    'stevearc/conform.nvim',
+    opts = {},
+  },
+  "kyazdani42/nvim-web-devicons", -- font icon
+  {                               -- neotree
     "nvim-neo-tree/neo-tree.nvim",
-      branch = "v3.x",
-      requires = { 
-        "nvim-lua/plenary.nvim",
-        "MunifTanjim/nui.nvim",
-        -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-      }
-  }
-
-  use 'christoomey/vim-tmux-navigator'  -- 用 ctrl + hjkl 定位窗口
-  use 'p00f/nvim-ts-rainbow' -- 配合treesitter 不同括号颜色区分
-
-  use 'nvimdev/lspsaga.nvim'
-  -- 语法补全
-  -- use 'glepnir/lspsaga.nvim' --LSP UI
-  use 'L3MON4D3/LuaSnip' -- snippet
-  use 'hoob3rt/lualine.nvim' --statusline
-  use 'onsails/lspkind-nvim' --vscode-like pictograms
-  use 'hrsh7th/cmp-buffer' --nvim-cmp source for buffer words
-  use 'hrsh7th/cmp-nvim-lsp' --nvim-cmp source for neovim's build
-  use 'hrsh7th/nvim-cmp' --Completion
-  use 'neovim/nvim-lspconfig' -- LSP
-  use {
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    }
+  },
+  'christoomey/vim-tmux-navigator', -- hjkl 定位窗口
+  'p00f/nvim-ts-rainbow',           -- 配合treesitter 不同括号颜色区分
+  'nvimdev/lspsaga.nvim',
+  'L3MON4D3/LuaSnip',               -- snippet
+  'hoob3rt/lualine.nvim',           --statusline
+  'onsails/lspkind-nvim',           --vscode-like pictograms
+  'hrsh7th/cmp-buffer',             --nvim-cmp source for buffer words
+  'hrsh7th/cmp-nvim-lsp',           --nvim-cmp source for neovim's build
+  'hrsh7th/nvim-cmp',               --Completion
+  {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
-  } -- 语法高亮
-  use 'jose-elias-alvarez/null-ls.nvim' -- use neovim as a alanguage server
-  use 'MunifTanjim/prettier.nvim' -- prettier plugin
-
-  use 'windwp/nvim-autopairs' -- 自动补全括号
-  use 'windwp/nvim-ts-autotag' -- ts 自动补全括号
-
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-telescope/telescope.nvim'
-  use 'nvim-telescope/telescope-file-browser.nvim'
-
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'saadparwaiz1/cmp_luasnip'
-
-  -- lsp
-  use { 'williamboman/mason.nvim' }
-  use { 'williamboman/mason-lspconfig.nvim' }
-
-  -- gcc 和gc 注释
-  use {
+  },                                 -- 语法高亮
+  'jose-elias-alvarez/null-ls.nvim', -- use neovim as a alanguage server
+  'MunifTanjim/prettier.nvim',       -- prettier plugin
+  'windwp/nvim-autopairs',           -- 自动补全括号
+  'windwp/nvim-ts-autotag',          -- ts 自动补全括号
+  'nvim-lua/plenary.nvim',
+  'nvim-telescope/telescope.nvim',
+  'nvim-telescope/telescope-file-browser.nvim',
+  'hrsh7th/cmp-path',
+  'hrsh7th/cmp-cmdline',
+  'saadparwaiz1/cmp_luasnip',
+  {
     'numToStr/Comment.nvim',
     config = function()
       require('Comment').setup()
     end
-  }
+  },
+  'akinsho/bufferline.nvim', -- buffer 分割线
+  -- 'norcalli/nvim-colorizer',
+  'lewis6991/gitsigns.nvim', -- 左侧git提示
+})
 
-  use 'akinsho/bufferline.nvim' -- buffer 分割线
-  use 'norcalli/nvim-colorizer'
-  use 'lewis6991/gitsigns.nvim' -- 左侧git提示
-
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end
-)
+-- theme
+vim.cmd('colorscheme everforest')

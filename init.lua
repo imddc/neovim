@@ -2,25 +2,24 @@ require('plugins.plugins-setup')
 
 require('core.options')
 require('core.keymaps')
-require('core.colorschema')
 
 require('plugins.lualine')
 require('plugins.neotree')
+require('plugins.conform')
 
 require('plugins.lspconfig')
 require('plugins.cmpconfig')
 require('plugins.lspkind')
-require('plugins.treesitter')
+-- require('plugins.treesitter')
 require('plugins.autopaires')
-require('plugins.ts-autotag')
+require("plugins.ts-autotag")
 
 require('plugins.telescope')
 require('plugins.bufferline')
-require('plugins.colorizer')
+-- require('plugins.colorizer')
 require('plugins.lspsaga')
 require('plugins.gitsigns')
 
-require('plugins.prettierd')
 require('plugins.null-ls')
 require('plugins.mason')
 

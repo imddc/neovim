@@ -7,4 +7,3 @@ autopairs.setup({
     'vim'
   }
 })
-

@@ -23,13 +23,13 @@ opt.ignorecase = true
 opt.breakindent = true
 opt.shiftwidth = 2
 opt.tabstop = 2
-opt.ai = true -- auto indent
-opt.si = true -- smart indent
+opt.ai = true    -- auto indent
+opt.si = true    -- smart indent
 opt.wrap = false -- no wrap lines
 opt.smartcase = true
 opt.backspace = 'start,eol,indent'
-opt.path:append{'**'} -- finding files -- search down into subfolders
-opt.wildignore:append{'*/node_modules/*'}
+opt.path:append { '**' } -- finding files -- search down into subfolders
+opt.wildignore:append { '*/node_modules/*' }
 
 -- Undercurl
 vim.cmd([[let &t_Cs = '\e[4:3m']])
@@ -54,9 +54,9 @@ opt.pumblend = 5
 opt.background = 'dark'
 
 
-opt.clipboard:append('unnamedplus') -- use system clipboard 
+opt.clipboard:append('unnamedplus') -- use system clipboard
 opt.completeopt = { 'menu', 'menuone', 'noselect' }
-opt.mouse:append('a')  -- allow the mouse to be used in Nvim
+opt.mouse:append('a')               -- allow the mouse to be used in Nvim
 
 --默认新窗口右和下
 opt.splitbelow = true
@@ -70,3 +70,12 @@ opt.signcolumn = 'yes'
 opt.incsearch = true
 
 opt.termguicolors = true
+
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank({
+      higroup = 'IncSearch',
+      timeout = 300
+    })
+  end
+})

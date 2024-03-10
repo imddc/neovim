@@ -8,10 +8,9 @@ treesitter.setup({
   ensure_installed = {
     'vim',
     'rust',
-    'lua',
     'javascript',
     'typescript',
-    'tsx',
+    -- 'tsx',
     'vue',
     'css',
     'json'

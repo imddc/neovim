@@ -14,8 +14,8 @@ keymap.set('i', 'jk', '<ESC>')
 keymap.set('i', 'kk', '<ESC>')
 
 -- 行首行尾
-keymap.set('n', '<S-h>', '0' )
-keymap.set('n', '<S-l>', '$' )
+keymap.set('n', '<S-h>', '0')
+keymap.set('n', '<S-l>', '$')
 
 -- split screen
 keymap.set('n', '<leader>sv', "<C-w>v")
