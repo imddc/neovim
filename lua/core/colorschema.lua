@@ -1,4 +1,4 @@
--- define your colorscheme here
+-- local colorscheme = 'neosolarized'
 local colorscheme = 'monokai_pro'
 
 local is_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
