@@ -18,6 +18,7 @@ if (not status) then
 end
 
 lazy.setup({
+  'mfussenegger/nvim-lint',
   {
     'pmizio/typescript-tools.nvim',
     dependencies = {
@@ -36,8 +37,8 @@ lazy.setup({
   'sainnhe/everforest',                        -- 主题
   'williamboman/mason.nvim',                   -- mason
   'williamboman/mason-lspconfig.nvim',         -- mason lspconfig
-  'neovim/nvim-lspconfig',                     --lspconfig
-  'WhoIsSethDaniel/mason-tool-installer.nvim', --mason tools
+  'neovim/nvim-lspconfig',                     -- lspconfig
+  'WhoIsSethDaniel/mason-tool-installer.nvim', -- mason tools
   'stevearc/conform.nvim',                     -- 格式化
   "kyazdani42/nvim-web-devicons",              -- font icon
   {                                            -- neotree

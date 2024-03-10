@@ -12,8 +12,9 @@ require('plugins.cmpconfig')
 require('plugins.lspkind')
 require('plugins.treesitter')       -- 语法高亮
 require('plugins.autopaires')       -- 自动括号配对
-require("plugins.ts-autotag")       --ts-autotag
+-- require("plugins.ts-autotag")       --ts-autotag
 require('plugins.typescript-tools') --ts的导入
+require('plugins.lint')
 require('plugins.comment')          --注释
 require('plugins.tailwind')
 
