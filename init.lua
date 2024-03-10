@@ -14,8 +14,10 @@ require('plugins.treesitter') -- 语法高亮
 require('plugins.autopaires') -- 自动括号配对
 require("plugins.ts-autotag") --ts-autotag
 require('plugins.comment')    --注释
+require('plugins.tailwind')
 
 require('plugins.telescope')
+-- require('plugins.bookmark')
 require('plugins.bufferline')
 -- require('plugins.colorizer')
 require('plugins.lspsaga')
@@ -23,18 +25,3 @@ require('plugins.gitsigns')
 
 require('plugins.null-ls')
 require('plugins.mason')
-
--- local has = function(x)
---   return vim.fn.has(x) == 1
--- end
---
--- local is_mac = has 'macunix'
--- local is_win = has 'win32'
---
--- if is_mac then
---   require('macos')
--- end
---
--- if is_win then
---   require('windows')
--- end

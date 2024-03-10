@@ -18,18 +18,22 @@ if (not status) then
 end
 
 lazy.setup({
-  'sainnhe/everforest',
-  'williamboman/mason.nvim',
-  'williamboman/mason-lspconfig.nvim',
-  'neovim/nvim-lspconfig',
-  'WhoIsSethDaniel/mason-tool-installer.nvim',
-  {
-    'stevearc/conform.nvim',
-    opts = {},
+  { -- 搜索树
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.5',
+    dependencies = { 'nvim-lua/plenary.nvim' }
   },
-  "kyazdani42/nvim-web-devicons", -- font icon
-  {                               -- neotree
-    "nvim-neo-tree/neo-tree.nvim",
+  'MattesGroeger/vim-bookmarks',               -- vim bookmarks
+  'tom-anders/telescope-vim-bookmarks.nvim',   -- telescope bookmarks
+  'sainnhe/everforest',                        -- 主题
+  'williamboman/mason.nvim',                   -- mason
+  'williamboman/mason-lspconfig.nvim',         -- mason lspconfig
+  'neovim/nvim-lspconfig',                     --lspconfig
+  'WhoIsSethDaniel/mason-tool-installer.nvim', --mason tools
+  'stevearc/conform.nvim',                     -- 格式化
+  "kyazdani42/nvim-web-devicons",              -- font icon
+  {                                            -- neotree
+    "nvim-neo-tree/neo-tree.nvim",             -- neo tree
     branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -57,10 +61,11 @@ lazy.setup({
     event = 'InsertEnter',
     opts = {}
   },
-  'windwp/nvim-ts-autotag',        -- ts 自动补全括号
+  'windwp/nvim-ts-autotag',                 -- ts 自动补全括号
   'nvim-lua/plenary.nvim',
-  'nvim-telescope/telescope.nvim', -- 搜索树
-  'hrsh7th/cmp-path',              -- cmp 相关
+  "roobert/tailwindcss-colorizer-cmp.nvim", -- tailwind自动补全
+  'mg979/vim-visual-multi',                 -- 多光标
+  'hrsh7th/cmp-path',                       -- cmp 相关
   'hrsh7th/cmp-cmdline',
   'saadparwaiz1/cmp_luasnip',
   'numToStr/Comment.nvim',   -- gcc注释

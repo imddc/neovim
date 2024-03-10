@@ -3,6 +3,10 @@ if (not status) then return end
 
 local actions = require('telescope.actions')
 local builtin = require('telescope.builtin')
+local keymap = vim.keymap
+
+keymap.set('n', '<leader>/', builtin.find_files, {})
+keymap.set('n', '<leader>.', builtin.live_grep, {})
 
 telescope.setup({
   defaults = {
@@ -10,26 +14,27 @@ telescope.setup({
       n = {
         ['q'] = actions.close
       }
+    },
+    file_ignore_patterns = {
+      'lazy-lock.json',
+      'node_modules',
+      'yarn.lock',
+      'pnpm.locl',
+      'npm.lock',
+      'schema.gql',
+    },
+    dynamic_preview_title = true,
+    path_display = { 'smart' },
+  },
+  picker = {
+    find_files = {
+      hidden = true,
     }
   },
-  extensions = {
-    file_browser = {
-      theme = 'dropdown',
-      -- disable netrw add use telescope-file-browser
-      ['i'] = {
-        ['<C-w>'] = function() vim.cmd('normal vbd') end,
-      },
-      ['n'] = {
-        ['/'] = function()
-          vim.cmd('startinsert')
-        end
-      }
+  layout_config = {
+    horizontal = {
+      preview_cutoff = 100,
+      preview_width = 0.5
     }
-  }
+  },
 })
-
-
-vim.keymap.set('n', '<leader>/', builtin.find_files, {})
-vim.keymap.set('n', '<leader>.', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
