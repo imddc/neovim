@@ -50,15 +50,18 @@ lazy.setup({
       "MunifTanjim/nui.nvim",
     }
   },
-  'p00f/nvim-ts-rainbow',                   -- 配合treesitter 不同括号颜色区分
   'nvimdev/lspsaga.nvim',
-  'L3MON4D3/LuaSnip',                       -- snippet
-  'hoob3rt/lualine.nvim',                   --statusline
-  'onsails/lspkind-nvim',                   --vscode-like pictograms
-  'hrsh7th/cmp-buffer',                     --nvim-cmp source for buffer words
-  'hrsh7th/cmp-nvim-lsp',                   --nvim-cmp source for neovim's build
-  'hrsh7th/nvim-cmp',                       --Completion
-  'nvim-treesitter/nvim-treesitter',
+  'L3MON4D3/LuaSnip',     -- snippet
+  'hoob3rt/lualine.nvim', --statusline
+  'onsails/lspkind-nvim', --vscode-like pictograms
+  'hrsh7th/cmp-buffer',   --nvim-cmp source for buffer words
+  'hrsh7th/cmp-nvim-lsp', --nvim-cmp source for neovim's build
+  'hrsh7th/nvim-cmp',     --Completion
+  {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  },
+  'p00f/nvim-ts-rainbow',                   -- 配合treesitter 不同括号颜色区分
   'windwp/nvim-autopairs',                  -- 自动补全括号
   'windwp/nvim-ts-autotag',                 -- ts 自动补全括号
   'axelvc/template-string.nvim',
