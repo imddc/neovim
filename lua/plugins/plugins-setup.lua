@@ -18,6 +18,14 @@ if (not status) then
 end
 
 lazy.setup({
+  {
+    'pmizio/typescript-tools.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'neovim/nvim-lspconfig',
+      opts = {}
+    }
+  },
   { -- 搜索树
     'nvim-telescope/telescope.nvim',
     tag = '0.1.5',
