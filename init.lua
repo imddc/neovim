@@ -10,7 +10,7 @@ require('plugins.conform')
 require('plugins.lspconfig')
 require('plugins.cmpconfig')
 require('plugins.lspkind')
--- require('plugins.treesitter')
+require('plugins.treesitter')
 require('plugins.autopaires')
 require("plugins.ts-autotag")
 

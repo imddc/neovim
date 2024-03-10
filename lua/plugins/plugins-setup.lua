@@ -52,8 +52,12 @@ lazy.setup({
   },                                 -- 语法高亮
   'jose-elias-alvarez/null-ls.nvim', -- use neovim as a alanguage server
   'MunifTanjim/prettier.nvim',       -- prettier plugin
-  'windwp/nvim-autopairs',           -- 自动补全括号
-  'windwp/nvim-ts-autotag',          -- ts 自动补全括号
+  {
+    'windwp/nvim-autopairs',         -- 自动补全括号
+    event = 'InsertEnter',
+    opts = {}
+  },
+  'windwp/nvim-ts-autotag', -- ts 自动补全括号
   'nvim-lua/plenary.nvim',
   'nvim-telescope/telescope.nvim',
   'nvim-telescope/telescope-file-browser.nvim',
