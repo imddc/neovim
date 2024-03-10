@@ -10,14 +10,25 @@ if (not status_ml) then
   return
 end
 
-local status_lspconfig, lspconfig = pcall(require, 'lspcofig')
-if (not status_lspconfig) then
-  print('mason-lspconfig is not work!')
+local status_mti, mti = pcall(require, 'mason-tool-installer')
+if (not status_mti) then
+  print('mason-tool-installer is not work!')
   return
 end
 
-mason.setup({})
-mason_lspconfig.setup({
+mason.setup({
+  ui = {
+    icons = {
+      package_installed = "✓",
+      package_pending = "➜",
+      package_uninstalled = "✗"
+    }
+  }
+})
+
+mason_lspconfig.setup({})
+
+mti.setup({
   ensure_installed = {
     'lua-language-server',
     'tailwindcss',
@@ -26,4 +37,4 @@ mason_lspconfig.setup({
   }
 })
 
-lspconfig.tailwindcss.setup({})
+require('lspconfig').tailwindcss.setup({})
