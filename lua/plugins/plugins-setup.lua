@@ -57,20 +57,14 @@ lazy.setup({
     event = 'InsertEnter',
     opts = {}
   },
-  'windwp/nvim-ts-autotag', -- ts 自动补全括号
+  'windwp/nvim-ts-autotag',        -- ts 自动补全括号
   'nvim-lua/plenary.nvim',
-  'nvim-telescope/telescope.nvim',
-  'nvim-telescope/telescope-file-browser.nvim',
-  'hrsh7th/cmp-path',
+  'nvim-telescope/telescope.nvim', -- 搜索树
+  'hrsh7th/cmp-path',              -- cmp 相关
   'hrsh7th/cmp-cmdline',
   'saadparwaiz1/cmp_luasnip',
-  {
-    'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end
-  },
-  'akinsho/bufferline.nvim', -- buffer 分割线
+  'numToStr/Comment.nvim',   -- gcc注释
+  'akinsho/bufferline.nvim', -- buffer
   -- 'norcalli/nvim-colorizer',
   'lewis6991/gitsigns.nvim', -- 左侧git提示
 })

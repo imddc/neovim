@@ -10,9 +10,10 @@ require('plugins.conform')
 require('plugins.lspconfig')
 require('plugins.cmpconfig')
 require('plugins.lspkind')
-require('plugins.treesitter')
-require('plugins.autopaires')
-require("plugins.ts-autotag")
+require('plugins.treesitter') -- 语法高亮
+require('plugins.autopaires') -- 自动括号配对
+require("plugins.ts-autotag") --ts-autotag
+require('plugins.comment')    --注释
 
 require('plugins.telescope')
 require('plugins.bufferline')

@@ -3,7 +3,6 @@ if (not status) then return end
 
 local actions = require('telescope.actions')
 local builtin = require('telescope.builtin')
-local fb_actions = require('telescope').extensions.file_browser.actions
 
 telescope.setup({
   defaults = {
@@ -21,8 +20,6 @@ telescope.setup({
         ['<C-w>'] = function() vim.cmd('normal vbd') end,
       },
       ['n'] = {
-        ['N'] = fb_actions.create,
-        ['h'] = fb_actions.goto_parent_dir,
         ['/'] = function()
           vim.cmd('startinsert')
         end
