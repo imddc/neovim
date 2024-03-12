@@ -22,12 +22,13 @@ require('plugins.suffound')         -- 快速展开关闭括号内容
 require('plugins.tailwind')
 
 require('plugins.telescope')
--- require('plugins.bookmark')
 require('plugins.bufferline')
 -- require('plugins.colorizer')
-require('plugins.lspsaga')
 require('plugins.gitsigns')
 
 
 -- require('plugins.null-ls')
 require('plugins.mason')
+
+-- rust
+require('plugins.lsp-rust')

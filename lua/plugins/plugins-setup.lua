@@ -18,8 +18,10 @@ if (not status) then
 end
 
 lazy.setup({
+  'simrat39/rust-tools.nvim', -- rust
+  'nvimdev/lspsaga.nvim',
   {
-    "folke/flash.nvim",
+    "folke/flash.nvim", -- 快速跳转
     event = "VeryLazy",
     opts = {},
     keys = {
@@ -75,7 +77,6 @@ lazy.setup({
     branch = "v3.x",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" }
   },
-  'nvimdev/lspsaga.nvim',
   'L3MON4D3/LuaSnip',     -- snippet
   'hoob3rt/lualine.nvim', --statusline
   'onsails/lspkind-nvim', --vscode-like pictograms

@@ -29,10 +29,6 @@ keymap.set('n', '<leader>;', ':Neotree toggle<cr>')
 keymap.set('n', '<Tab>', ':BufferLineCycleNext<cr>')
 keymap.set('n', '<S-Tab>', ':BufferLineCyclePrev<cr>')
 
--- 跳转到错误并显示错误信息
-keymap.set('n', '[d', vim.diagnostic.goto_prev)
-keymap.set('n', ']d', vim.diagnostic.goto_next)
-
 -- 缩进
 keymap.set('v', '<', '<gv')
 keymap.set('v', '>', '>gv')
