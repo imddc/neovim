@@ -18,6 +18,11 @@ if (not status) then
 end
 
 lazy.setup({
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+  },
   'rmagatti/alternate-toggler', -- 快速切换
   'echasnovski/mini.nvim',      -- mini.indentscope 缩进线
   { 'akinsho/toggleterm.nvim', version = '*', config = true },
