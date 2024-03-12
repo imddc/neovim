@@ -18,7 +18,8 @@ require('plugins.lint')
 require('plugins.indent')           -- 缩进虚线
 require('plugins.comment')          -- 注释
 require('plugins.alternate')        -- 快速转换
-require('plugins.suffound')
+require('plugins.suffound')         -- 快速展开关闭括号内容
+require('plugins.todo-comments')    -- todo tree
 require('plugins.tailwind')
 
 require('plugins.telescope')

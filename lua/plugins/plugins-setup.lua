@@ -19,6 +19,19 @@ end
 
 lazy.setup({
   {
+    "folke/todo-comments.nvim", -- todo 注释
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    opts = {},
+  },
+  {
+    'Wansmer/treesj', -- 用于切换箭头函数是否简写
+    keys = { '<space>m', '<space>j', '<space>s' },
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  },
+  'gcmt/wildfire.vim', -- 快速选中
+  {
     "kylechui/nvim-surround",
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
@@ -29,11 +42,7 @@ lazy.setup({
   'mfussenegger/nvim-lint',
   {
     'pmizio/typescript-tools.nvim',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      'neovim/nvim-lspconfig',
-      opts = {}
-    }
+    dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig', opts = {} }
   },
   { -- 搜索树
     'nvim-telescope/telescope.nvim',
@@ -52,11 +61,7 @@ lazy.setup({
   {                                            -- neotree
     "nvim-neo-tree/neo-tree.nvim",             -- neo tree
     branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    }
+    dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" }
   },
   'nvimdev/lspsaga.nvim',
   'L3MON4D3/LuaSnip',     -- snippet
