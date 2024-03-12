@@ -16,10 +16,9 @@ require('plugins.autopaires')       -- 自动括号配对
 require('plugins.typescript-tools') -- ts的导入
 require('plugins.lint')
 require('plugins.indent')           -- 缩进虚线
-require('plugins.comment')          -- 注释
+require('plugins.comment')          -- 注释 + todo
 require('plugins.alternate')        -- 快速转换
 require('plugins.suffound')         -- 快速展开关闭括号内容
-require('plugins.todo-comments')    -- todo tree
 require('plugins.tailwind')
 
 require('plugins.telescope')
