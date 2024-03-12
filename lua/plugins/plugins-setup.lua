@@ -18,7 +18,8 @@ if (not status) then
 end
 
 lazy.setup({
-  'echasnovski/mini.nvim',
+  'rmagatti/alternate-toggler', -- 快速切换
+  'echasnovski/mini.nvim',      -- mini.indentscope 缩进线
   { 'akinsho/toggleterm.nvim', version = '*', config = true },
   'mfussenegger/nvim-lint',
   {
