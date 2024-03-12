@@ -32,3 +32,6 @@ require('plugins.mason')
 
 -- rust
 require('plugins.lsp-rust')
+
+-- animation
+require('plugins.neovide')
