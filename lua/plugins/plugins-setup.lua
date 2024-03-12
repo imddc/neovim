@@ -18,6 +18,7 @@ if (not status) then
 end
 
 lazy.setup({
+  'akinsho/toggleterm.nvim',
   'mfussenegger/nvim-lint',
   {
     'pmizio/typescript-tools.nvim',

@@ -1,6 +1,6 @@
 local status_mason, mason = pcall(require, 'mason')
 if (not status_mason) then
-  print('mason is not work!')
+  print('mason is not working!')
   return
 end
 

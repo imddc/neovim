@@ -11,6 +11,7 @@ require('plugins.lspconfig')
 require('plugins.cmpconfig')
 require('plugins.lspkind')
 require('plugins.treesitter')       -- 语法高亮
+require('plugins.term')             -- toggleterm
 require('plugins.autopaires')       -- 自动括号配对
 require('plugins.typescript-tools') -- ts的导入
 require('plugins.lint')

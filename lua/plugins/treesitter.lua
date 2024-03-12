@@ -8,7 +8,6 @@ treesitter.setup({
   ensure_installed = {
     'javascript',
     'typescript',
-    'javascript',
     'html',
     'css',
     'json',
@@ -20,8 +19,8 @@ treesitter.setup({
     'markdown_inline',
     'tsx',
     "vim",
-    "lua",
     'vue',
+    "lua",
   },
   sync_install = false,
   auto_install = true,

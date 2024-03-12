@@ -1,4 +1,9 @@
-require('lualine').setup {
+local status, lualine = pcall(require, 'lualine')
+if (not status) then
+  print('lualine is not working!')
+end
+
+lualine.setup {
   options = {
     icons_enabled = true,
     theme = 'auto',
@@ -31,7 +36,7 @@ require('lualine').setup {
     lualine_c = { {
       'filename',
       file_statue = true,
-      path = 1     -- 1 = relative path
+      path = 1 -- 1 = relative path
     } },
     lualine_x = { 'location' },
     lualine_y = {},

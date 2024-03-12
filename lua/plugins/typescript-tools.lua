@@ -8,11 +8,7 @@ end
 keymap.set('n', '<space>m', '<cmd>TSToolsOrganizeImports<cr>')
 keymap.set('n', '<space>a', '<cmd>TSToolsAddMissingImports<cr>')
 
-local status_api, api = pcall(require, 'typescript-tools.api')
-if (not status_api) then
-  print('typescript_tools is not working!')
-  return
-end
+local api = require('typescript-tools.api')
 
 typescript_tools.setup({
   handlers = {

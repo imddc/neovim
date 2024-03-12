@@ -1,5 +1,8 @@
 local status, telescope = pcall(require, 'telescope')
-if (not status) then return end
+if (not status) then
+  print('telescope is not working!')
+  return
+end
 
 local actions = require('telescope.actions')
 local builtin = require('telescope.builtin')
