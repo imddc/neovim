@@ -36,3 +36,7 @@ keymap.set('v', '>', '>gv')
 -- 选中条件下上下移动行
 keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
+-- project
+keymap.set('n', '<leader>d', '<cmd>Telescope neovim-project discover<cr>')
+keymap.set('n', '<leader>h', '<cmd>Telescope neovim-project history<cr>')

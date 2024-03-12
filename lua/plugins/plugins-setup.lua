@@ -33,6 +33,26 @@ lazy.setup({
     },
   },
   {
+    "coffebar/neovim-project", -- 项目切换
+    opts = {
+      projects = {             -- define project roots
+        "~/workspace/*",
+        '~/Desktop/item/front/pc/*'
+      },
+    },
+    init = function()
+      -- enable saving the state of plugins in the session
+      vim.opt.sessionoptions:append("globals") -- save global variables that start with an uppercase letter and contain at least one lowercase letter.
+    end,
+    dependencies = {
+      { "nvim-lua/plenary.nvim" },
+      { "nvim-telescope/telescope.nvim", tag = "0.1.4" },
+      { "Shatur/neovim-session-manager" },
+    },
+    lazy = false,
+    priority = 100,
+  },
+  {
     "folke/todo-comments.nvim", -- todo 注释
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -52,7 +72,7 @@ lazy.setup({
   },
   'rmagatti/alternate-toggler', -- 快速切换
   'echasnovski/mini.nvim',      -- mini.indentscope 缩进线
-  { 'akinsho/toggleterm.nvim', version = '*', config = true },
+  { 'akinsho/toggleterm.nvim', version = "*", config = true },
   'mfussenegger/nvim-lint',
   {
     'pmizio/typescript-tools.nvim',
