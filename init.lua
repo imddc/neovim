@@ -26,7 +26,6 @@ require('plugins.bufferline')
 -- require('plugins.colorizer')
 require('plugins.gitsigns')
 
-
 -- require('plugins.null-ls')
 require('plugins.mason')
 

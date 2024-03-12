@@ -35,18 +35,25 @@ local on_attach = function(client)
   end
 end
 
+-- ts-server
 nvim_lsp.tsserver.setup({
   on_attach = on_attach,
   filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },
   cmd = { 'typescript-language-server', '--stdio' },
 })
+-- volar
+nvim_lsp.volar.setup({})
+-- unocss
+nvim_lsp.unocss.setup({})
+-- tailwindcss
+nvim_lsp.tailwindcss.setup({})
 
 nvim_lsp.lua_ls.setup({
   on_attach = on_attach,
   settings = {
     Lua = {
       diagnostic = {
-        globals = { 'vim' }
+        globals = { 'vim' },
       },
       workspace = {
         library = vim.api.nvim_get_runtime_file('', true),

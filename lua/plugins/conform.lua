@@ -11,6 +11,7 @@ conform.setup({
     typescript = { 'prettierd' },
     javascriptreact = { 'prettierd' },
     typescriptreact = { 'prettierd' },
+    vue = { 'prettierd' },
     css = { 'prettierd' },
     html = { 'prettierd' },
     json = { 'prettierd' },
