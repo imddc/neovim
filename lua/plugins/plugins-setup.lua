@@ -41,7 +41,6 @@ lazy.setup({
       },
     },
     init = function()
-      -- enable saving the state of plugins in the session
       vim.opt.sessionoptions:append("globals") -- save global variables that start with an uppercase letter and contain at least one lowercase letter.
     end,
     dependencies = {
@@ -78,14 +77,17 @@ lazy.setup({
     'pmizio/typescript-tools.nvim',
     dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig', opts = {} }
   },
-  { -- 搜索树
-    'nvim-telescope/telescope.nvim',
+  {
+    'nvim-telescope/telescope.nvim', -- 搜索树
     tag = '0.1.5',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
   'MattesGroeger/vim-bookmarks',               -- vim bookmarks
   'tom-anders/telescope-vim-bookmarks.nvim',   -- telescope bookmarks
   'sainnhe/everforest',                        -- 主题
+  'tanvirtin/monokai.nvim',                    -- 主题 monokai
+  'glepnir/dashboard-nvim',                    -- dashboard
+  -- 'nvimdev/dashboard-nvim',
   'williamboman/mason.nvim',                   -- mason
   'williamboman/mason-lspconfig.nvim',         -- mason lspconfig
   'neovim/nvim-lspconfig',                     -- lspconfig
@@ -95,18 +97,19 @@ lazy.setup({
   {                                            -- neotree
     "nvim-neo-tree/neo-tree.nvim",             -- neo tree
     branch = "v3.x",
-    dependencies = { "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons", "MunifTanjim/nui.nvim" }
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    }
   },
-  'L3MON4D3/LuaSnip',     -- snippet
-  'hoob3rt/lualine.nvim', --statusline
-  'onsails/lspkind-nvim', --vscode-like pictograms
-  'hrsh7th/cmp-buffer',   --nvim-cmp source for buffer words
-  'hrsh7th/cmp-nvim-lsp', --nvim-cmp source for neovim's build
-  'hrsh7th/nvim-cmp',     --Completion
-  {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
-  },
+  'L3MON4D3/LuaSnip',                       -- snippet
+  'hoob3rt/lualine.nvim',                   -- statusline
+  'onsails/lspkind-nvim',                   -- vscode-like pictograms
+  'hrsh7th/cmp-buffer',                     -- nvim-cmp source for buffer words
+  'hrsh7th/cmp-nvim-lsp',                   -- nvim-cmp source for neovim's build
+  'hrsh7th/nvim-cmp',                       -- Completion
+  'nvim-treesitter/nvim-treesitter',        -- treesitter
   'p00f/nvim-ts-rainbow',                   -- 配合treesitter 不同括号颜色区分
   'windwp/nvim-autopairs',                  -- 自动补全括号
   'windwp/nvim-ts-autotag',                 -- ts 自动补全括号
@@ -124,3 +127,4 @@ lazy.setup({
 
 -- theme
 vim.cmd('colorscheme everforest')
+-- vim.cmd('colorscheme monokai_pro')

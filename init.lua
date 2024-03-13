@@ -1,4 +1,5 @@
 require('plugins.plugins-setup')
+require('plugins.dashboard')
 
 require('core.options')
 require('core.keymaps')
@@ -8,6 +9,7 @@ require('plugins.neotree')
 require('plugins.conform')
 
 require('plugins.lspconfig')
+-- require('plugins.bookmark')
 require('plugins.cmpconfig')
 require('plugins.lspkind')
 require('plugins.treesitter')       -- 语法高亮

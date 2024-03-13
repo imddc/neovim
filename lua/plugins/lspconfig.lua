@@ -14,7 +14,8 @@ local builtin = require('telescope.builtin')
 
 saga.setup({
   ui = {
-    border = 'rounded'
+    border = 'single',
+    devicons = true
   }
 })
 
@@ -39,7 +40,6 @@ end
 nvim_lsp.tsserver.setup({
   on_attach = on_attach,
   filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },
-  cmd = { 'typescript-language-server', '--stdio' },
 })
 -- volar
 nvim_lsp.volar.setup({})
