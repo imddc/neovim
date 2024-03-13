@@ -9,8 +9,12 @@ keymap.set('n', '<space>m', '<cmd>TSToolsOrganizeImports<cr>')
 keymap.set('n', '<space>a', '<cmd>TSToolsAddMissingImports<cr>')
 
 local api = require('typescript-tools.api')
-
 typescript_tools.setup({
+  settings = {
+    tsserver_file_preferences = {
+      importModuleSpecifierPreference = 'non-relative'
+    }
+  },
   handlers = {
     ['textDocument/publishDiagnostics'] = api.filter_diagnostics(
       { 6133 }

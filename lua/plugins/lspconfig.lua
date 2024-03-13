@@ -37,16 +37,22 @@ local on_attach = function(client)
 end
 
 -- ts-server
-nvim_lsp.tsserver.setup({
-  on_attach = on_attach,
-  filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },
-})
+-- nvim_lsp.tsserver.setup({
+--   on_attach = on_attach,
+--   filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' },
+-- })
 -- volar
-nvim_lsp.volar.setup({})
+nvim_lsp.volar.setup({
+  on_attach = on_attach,
+})
 -- unocss
-nvim_lsp.unocss.setup({})
+nvim_lsp.unocss.setup({
+  on_attach = on_attach,
+})
 -- tailwindcss
-nvim_lsp.tailwindcss.setup({})
+nvim_lsp.tailwindcss.setup({
+  on_attach = on_attach,
+})
 
 nvim_lsp.lua_ls.setup({
   on_attach = on_attach,

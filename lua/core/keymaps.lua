@@ -24,6 +24,7 @@ keymap.set('n', '<leader>sh', "<C-w>s")
 -- 取消高亮
 keymap.set('n', '<leader>nh', ":nohl<CR>")
 keymap.set('n', '<leader>;', ':Neotree toggle<cr>')
+keymap.set('n', '<C-h>', ':Neotree<cr>')
 
 -- toggle buffer
 keymap.set('n', '<Tab>', ':BufferLineCycleNext<cr>')

@@ -69,9 +69,9 @@ lazy.setup({
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
   },
-  'rmagatti/alternate-toggler', -- 快速切换
-  'echasnovski/mini.nvim',      -- mini.indentscope 缩进线
-  { 'akinsho/toggleterm.nvim', version = "*", config = true },
+  'rmagatti/alternate-toggler',                                -- 快速切换
+  'echasnovski/mini.nvim',                                     -- mini.indentscope 缩进线
+  { 'akinsho/toggleterm.nvim', version = "*", config = true }, -- 终端内终端
   'mfussenegger/nvim-lint',
   {
     'pmizio/typescript-tools.nvim',
