@@ -4,6 +4,8 @@ return {
     projects = { -- define project roots
       '~/workspace/*',
       '~/.config/*',
+      '~/desktop/item/front/*',
+      '~/desktop/item/backend/*',
     },
   },
   init = function()
