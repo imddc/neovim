@@ -25,6 +25,7 @@ return {
         'rust-analyzer',
         'graphql-language-service-cli',
         'prisma-language-server',
+        'vue-language-server',
       },
     }
   end,
