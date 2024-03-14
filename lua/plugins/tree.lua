@@ -44,7 +44,7 @@ return {
           update_cwd = true,
         },
         git = {
-          enable = false,
+          enable = true,
         },
         diagnostics = {
           enable = true,

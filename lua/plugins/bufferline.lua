@@ -10,26 +10,26 @@ return {
         show_close_icon = false,
         color_icons = true,
       },
-      -- highlights = {
-      --   separator = {
-      --     guifg = '#073642',
-      --     guibg = '#002b3620',
-      --   },
-      --   separator_selected = {
-      --     guifg = '#073642',
-      --   },
-      --   background = {
-      --     guifg = '#657b83',
-      --     guibg = '#ff000020',
-      --   },
-      --   buffer_selected = {
-      --     guifg = '#fdf6e3',
-      --     gui = 'bold',
-      --   },
-      --   fill = {
-      --     guibg = '#07364220',
-      --   },
-      -- },
+      highlights = {
+        separator = {
+          guifg = '#073642',
+          guibg = '#002b3620',
+        },
+        separator_selected = {
+          guifg = '#073642',
+        },
+        background = {
+          guifg = '#657b83',
+          guibg = '#ff000020',
+        },
+        buffer_selected = {
+          guifg = '#fdf6e3',
+          gui = 'bold',
+        },
+        fill = {
+          guibg = '#07364220',
+        },
+      },
     }
   end,
 }
