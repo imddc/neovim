@@ -15,6 +15,9 @@ return {
           i = {
             ['esc'] = actions.close,
           },
+          n = {
+            ['q'] = actions.close,
+          },
         },
         file_ignore_patterns = {
           'codegen.ts',
