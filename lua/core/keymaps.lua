@@ -24,11 +24,13 @@ keymap.set('n', '<leader>sh', "<C-w>s")
 -- 取消高亮
 keymap.set('n', '<leader>nh', ":nohl<CR>")
 keymap.set('n', '<leader>;', ':Neotree toggle<cr>')
-keymap.set('n', '<C-h>', ':Neotree<cr>')
+-- keymap.set('n', '<C-h>', ':Neotree<cr>')
 
 -- toggle buffer
 keymap.set('n', '<Tab>', ':BufferLineCycleNext<cr>')
+keymap.set('n', '<c-h>', ':BufferLineCycleNext<cr>')
 keymap.set('n', '<S-Tab>', ':BufferLineCyclePrev<cr>')
+keymap.set('n', '<c-l>', ':BufferLineCyclePrev<cr>')
 
 -- 缩进
 keymap.set('v', '<', '<gv')
