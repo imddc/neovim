@@ -6,9 +6,16 @@ return {
     'hrsh7th/cmp-path', -- source for file system paths
     'L3MON4D3/LuaSnip', -- snippet engine
     'saadparwaiz1/cmp_luasnip', -- for autocompletion
-    'onsails/lspkind.nvim', -- vs-code like pictograms
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-cmdline',
+
+    -- v-snip
+    'hrsh7th/cmp-vsnip',
+    'hrsh7th/vim-vsnip',
+    'rafamadriz/friendly-snippets',
+
+    -- lspkind
+    'onsails/lspkind.nvim', -- vs-code like pictograms
   },
   config = function()
     local cmp = require 'cmp'
@@ -40,13 +47,14 @@ return {
         ['<C-j>'] = cmp.mapping.select_next_item(),
         ['<CR>'] = cmp.mapping.confirm { select = true }, -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
       },
-      sources = cmp.config.sources({
+      sources = cmp.config.sources {
         { name = 'nvim_lsp' },
         { name = 'luasnip' }, -- For luasnip users.
         { name = 'crates' },
-      }, {
+        { name = 'vsnip' }, -- v snip
         { name = 'buffer' },
-      }),
+        { name = 'path' },
+      },
     }
 
     -- Set configuration for specific filetype.

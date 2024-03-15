@@ -24,8 +24,7 @@ return {
       },
     }
 
-    local autocmd = vim.api.nvim_create_autocmd
-
+    -- local autocmd = vim.api.nvim_create_autocmd
     -- autocmd('BufWritePre', {
     --   -- pattern = '*.ts,*.tsx,*.jsx,*.js,*.vue,',
     --   callback = function(args)
