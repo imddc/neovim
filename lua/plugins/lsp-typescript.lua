@@ -13,7 +13,9 @@ return {
 
     require('typescript-tools').setup {
       handlers = {
-        ['textDocument/publishDiagnostics'] = api.filter_diagnostics { 6133 },
+        ['textDocument/publishDiagnostics'] = api.filter_diagnostics {
+          6133,
+        },
       },
       settings = {
         tsserver_file_preferences = {
@@ -24,13 +26,13 @@ return {
 
     local autocmd = vim.api.nvim_create_autocmd
 
-    autocmd('BufWritePre', {
-      pattern = '*.ts,*.tsx,*.jsx,*.js,*.vue,',
-      callback = function(args)
-        vim.cmd 'TSToolsAddMissingImports sync'
-        vim.cmd 'TSToolsOrganizeImports sync'
-        require('conform').format { bufnr = args.buf }
-      end,
-    })
+    -- autocmd('BufWritePre', {
+    --   -- pattern = '*.ts,*.tsx,*.jsx,*.js,*.vue,',
+    --   callback = function(args)
+    --     vim.cmd 'TSToolsAddMissingImports sync'
+    --     vim.cmd 'TSToolsOrganizeImports sync'
+    --     require('conform').format { bufnr = args.buf }
+    --   end,
+    -- })
   end,
 }
