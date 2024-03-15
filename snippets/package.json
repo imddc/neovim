@@ -7,6 +7,18 @@
           "typescriptreact"
         ],
         "path": "./typescriptreact.json"
+      },
+      {
+        "language": [
+          "html"
+        ],
+        "path": "./html.json"
+      },
+      {
+        "language": [
+          "vue"
+        ],
+        "path": "./vue.json"
       }
     ]
   }
