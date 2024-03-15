@@ -22,12 +22,16 @@ return {
       },
     }
 
+    print 'volar is working'
+
     -- volar
     lspconfig.volar.setup {}
     -- unocss
     lspconfig.unocss.setup {}
     -- tailwindcss
     lspconfig.tailwindcss.setup {}
+    -- html
+    lspconfig.html.setup {}
     -- prisma
     lspconfig.prismals.setup {}
   end,

@@ -1,6 +1,8 @@
 if vim.g.neovide then
-  vim.o.guifont = 'JetbrainsMono Nerd Font:h14:i'
+  vim.o.guifont = 'FiraCode Nerd Font Mono:h14:i'
   vim.g.neovide_scale_factor = 1.6
+  vim.g.neovide_transparency = 0.8
+  vim.g.neovide_window_blurred = true
 
   -- dynamic scale
   local change_scale_factor = function(delta)
