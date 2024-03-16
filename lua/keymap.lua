@@ -25,5 +25,5 @@ keymap.set('n', '<S-h>', '0')
 keymap.set('n', '<S-l>', '$')
 
 -- 切换buffer
-keymap.set('n', '<c-h>', ':BufferLineCycleNext<cr>')
-keymap.set('n', '<c-l>', ':BufferLineCyclePrev<cr>')
+keymap.set('n', '<c-h>', ':BufferLineCyclePrev<cr>')
+keymap.set('n', '<c-l>', ':BufferLineCycleNext<cr>')
