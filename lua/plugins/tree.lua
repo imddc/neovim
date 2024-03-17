@@ -1,5 +1,6 @@
 local keymap = vim.keymap
 keymap.set('n', '<leader>;', '<cmd>Neotree toggle<cr>')
+keymap.set('n', '<c-;>', '<cmd>Neotree<cr>')
 
 return {
   'nvim-neo-tree/neo-tree.nvim',

@@ -6,6 +6,8 @@ return {
       '~/.config/*',
       '~/Desktop/item/front/*',
       '~/Desktop/item/backend/*',
+      '~/Desktop/item/electron/*',
+      '~/Desktop/rust/*',
     },
   },
   init = function()

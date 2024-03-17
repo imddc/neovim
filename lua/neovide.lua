@@ -1,8 +1,30 @@
 if vim.g.neovide then
-  vim.o.guifont = 'FiraCode Nerd Font Mono:h14:i'
-  vim.g.neovide_scale_factor = 1.6
-  vim.g.neovide_transparency = 0.8
+  -- 设置字体
+  vim.o.guifont = 'FiraCode Nerd Font Mono:h20:i'
+  -- 设置窗口缩放
+  vim.g.neovide_scale_factor = 1
+  -- 设置窗口透明度
+  vim.g.neovide_transparency = 0.9
+  -- 设置窗口模糊
   vim.g.neovide_window_blurred = true
+  -- 设置字体
+  vim.opt.linespace = 4
+  -- 设置窗口大小
+  vim.g.neovide_remember_window_size = true
+  -- 设置光标效果
+  vim.g.neovide_cursor_vfx_mode = 'railgun'
+  -- 设置光标效果透明度
+  vim.g.neovide_cursor_vfx_opacity = 200
+  -- 设置光标效果颜色
+  vim.g.neovide_cursor_vfx_color = '#ff0000'
+  -- 设置光标效果宽度
+  vim.g.neovide_cursor_vfx_width = 10
+  -- 设置光标效果粒子大小
+  vim.g.neovide_cursor_vfx_particle_lifetime = 1
+  -- 用于查看渲染性能
+  vim.g.neovide_profiler = false
+  -- 设置渲染刷新率
+  vim.g.neovide_refresh_rate = 60
 
   -- dynamic scale
   local change_scale_factor = function(delta)
