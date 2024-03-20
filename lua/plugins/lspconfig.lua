@@ -79,6 +79,9 @@ return {
     lspconfig.tailwindcss.setup {
       on_attach = on_attach,
     }
+    lspconfig.cssls.setup {
+      on_attach = on_attach,
+    }
     -- html
     lspconfig.html.setup {
       on_attach = on_attach,
