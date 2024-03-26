@@ -12,12 +12,12 @@ return {
   'neovim/nvim-lspconfig',
   config = function()
     -- graphql
-    lspconfig.graphql.setup {
-      filetypes = {
-        'graphql',
-        'gql',
-      },
-    }
+    -- lspconfig.graphql.setup {
+    --   filetypes = {
+    --     'graphql',
+    --     'gql',
+    --   },
+    -- }
 
     -- lua
     lspconfig.lua_ls.setup {
@@ -35,39 +35,15 @@ return {
     -- volar
     lspconfig.volar.setup {
       filetypes = {
-        'typescript',
         'javascript',
+        'typescript',
         'vue',
       },
       on_attach = on_attach,
       init_options = {
-        typescript = {
-          tsdk = '/Users/dccd/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib',
-        },
-        preferences = {
-          disableSuggestions = true,
-        },
-        languageFeatures = {
-          implementation = true,
-          references = true,
-          definition = true,
-          typeDefinition = true,
-          callHierarchy = true,
-          hover = true,
-          rename = true,
-          renameFileRefactoring = true,
-          signatureHelp = true,
-          codeAction = true,
-          workspaceSymbol = true,
-          diagnostics = true,
-          semanticTokens = true,
-          completion = {
-            defaultTagNameCase = 'both',
-            defaultAttrNameCase = 'kebabCase',
-            getDocumentNameCasesRequest = false,
-            getDocumentSelectionRequest = false,
-          },
-        },
+        -- typescript = {
+        --   tsdk = '/Users/dccd/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib',
+        -- },
       },
     }
 

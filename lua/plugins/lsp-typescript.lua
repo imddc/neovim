@@ -6,23 +6,23 @@ return {
   },
   config = function()
     local keymap = vim.keymap
-    local api = require 'typescript-tools.api'
+    -- local api = require 'typescript-tools.api'
 
     keymap.set('n', '<space>m', '<cmd>TSToolsOrganizeImports<cr>')
     keymap.set('n', '<space>a', '<cmd>TSToolsAddMissingImports<cr>')
 
-    require('typescript-tools').setup {
-      handlers = {
-        ['textDocument/publishDiagnostics'] = api.filter_diagnostics {
-          6133,
-        },
-      },
-      settings = {
-        tsserver_file_preferences = {
-          importModuleSpecifierPreference = 'non-relative',
-        },
-      },
-    }
+    -- require('typescript-tools').setup {
+    --   handlers = {
+    --     ['textDocument/publishDiagnostics'] = api.filter_diagnostics {
+    --       6133,
+    --     },
+    --   },
+    --   settings = {
+    --     tsserver_file_preferences = {
+    --       importModuleSpecifierPreference = 'non-relative',
+    --     },
+    --   },
+    -- }
 
     -- local autocmd = vim.api.nvim_create_autocmd
     -- autocmd('BufWritePre', {
