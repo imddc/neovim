@@ -20,8 +20,8 @@ local config = function()
       completeopt = 'menu,menuone,preview,noselect',
     },
     window = {
-      completion = cmp.config.window.bordered(),
-      documentation = cmp.config.window.bordered(),
+      -- completion = cmp.config.window.bordered(),
+      -- documentation = cmp.config.window.bordered(),
     },
     view = {
       entries = { name = 'custom', selection_order = 'near_cursor' },
