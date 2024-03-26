@@ -8,7 +8,7 @@ return {
         border = 'rounded',
       },
       lightbulb = {
-        enable = false,
+        enable = true,
       },
     }
 

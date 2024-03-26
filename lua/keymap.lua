@@ -24,6 +24,14 @@ keymap.set('i', 'kk', '<ESC>')
 keymap.set('n', '<S-h>', '0')
 keymap.set('n', '<S-l>', '$')
 
+-- 选中条件下上下移动行
+keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
 -- 切换buffer
 keymap.set('n', '<c-h>', ':BufferLineCyclePrev<cr>')
 keymap.set('n', '<c-l>', ':BufferLineCycleNext<cr>')
+
+-- project
+keymap.set('n', '<leader>d', '<CMD>Telescope neovim-project discover<CR>', {})
+keymap.set('n', '<leader>h', '<CMD>Telescope neovim-project history<CR>', {})

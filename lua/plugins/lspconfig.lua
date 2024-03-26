@@ -12,12 +12,12 @@ return {
   'neovim/nvim-lspconfig',
   config = function()
     -- graphql
-    -- lspconfig.graphql.setup {
-    --   filetypes = {
-    --     'graphql',
-    --     'gql',
-    --   },
-    -- }
+    lspconfig.graphql.setup {
+      filetypes = {
+        'graphql',
+        'gql',
+      },
+    }
 
     -- lua
     lspconfig.lua_ls.setup {
@@ -36,14 +36,32 @@ return {
     lspconfig.volar.setup {
       filetypes = {
         'javascript',
+        'javascriptreact',
         'typescript',
+        'typescriptreact',
         'vue',
       },
       on_attach = on_attach,
+    }
+
+    lspconfig.tsserver.setup {
       init_options = {
-        -- typescript = {
-        --   tsdk = '/Users/dccd/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib',
-        -- },
+        plugins = {
+          {
+            name = '@vue/typescript-plugin',
+            -- location = '/usr/local/lib/node_modules/@vue/typescript-plugin',
+            -- volar 2 不会管理 .vue的 <script> 块中的 TypeScript
+            -- 因此tsserver需要调用volar插件以认出 '.vue'
+            location = '/opt/homebrew/lib/node_modules/@vue/typescript-plugin',
+            languages = { 'javascript', 'typescript', 'vue' },
+          },
+        },
+      },
+
+      filetypes = {
+        'javascript',
+        'typescript',
+        'vue',
       },
     }
 
@@ -51,6 +69,7 @@ return {
     lspconfig.unocss.setup {
       on_attach = on_attach,
     }
+
     -- tailwindcss
     lspconfig.tailwindcss.setup {
       on_attach = on_attach,
