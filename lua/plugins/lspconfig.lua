@@ -8,6 +8,9 @@ local on_attach = function(client)
   end
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 return {
   'neovim/nvim-lspconfig',
   config = function()
@@ -70,18 +73,30 @@ return {
     -- unocss
     lspconfig.unocss.setup {
       on_attach = on_attach,
+      cmd = {
+        'unocss-langurage-server',
+        '--stdio',
+      },
+      filetypes = {
+        'html',
+        'vue',
+        'javascriptreact',
+        'typescriptreact',
+      },
     }
-
     -- tailwindcss
     lspconfig.tailwindcss.setup {
       on_attach = on_attach,
     }
+    -- css
     lspconfig.cssls.setup {
       on_attach = on_attach,
+      capabilities = capabilities,
     }
     -- html
     lspconfig.html.setup {
       on_attach = on_attach,
+      capabilities = capabilities,
     }
     -- prisma
     lspconfig.prismals.setup {}
