@@ -33,3 +33,5 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
+
+-- vim.cmd [[colorscheme monokai_pro]]

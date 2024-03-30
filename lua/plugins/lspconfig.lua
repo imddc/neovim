@@ -39,9 +39,7 @@ return {
     lspconfig.volar.setup {
       filetypes = {
         'javascript',
-        'javascriptreact',
         'typescript',
-        'typescriptreact',
         'vue',
       },
       on_attach = on_attach,
