@@ -38,8 +38,6 @@ return {
     -- volar
     lspconfig.volar.setup {
       filetypes = {
-        'javascript',
-        'typescript',
         'vue',
       },
       on_attach = on_attach,
@@ -97,6 +95,11 @@ return {
       capabilities = capabilities,
     }
     lspconfig.marksman.setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
+
+    lspconfig.jsonls.setup {
       on_attach = on_attach,
       capabilities = capabilities,
     }

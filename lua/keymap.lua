@@ -21,7 +21,7 @@ keymap.set('i', 'jk', '<ESC>')
 keymap.set('i', 'kk', '<ESC>')
 
 -- 行首行尾
-keymap.set('n', '<S-h>', '0')
+keymap.set('n', '<S-h>', '^')
 keymap.set('n', '<S-l>', '$')
 
 -- 选中条件下上下移动行

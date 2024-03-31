@@ -5,9 +5,10 @@ return {
       '~/workspace/*',
       '~/.config/*',
       '~/Desktop/item/front/*',
+      '~/Desktop/item/monorepo/*',
       '~/Desktop/item/backend/*',
       '~/Desktop/item/electron/*',
-      '~/Desktop/rust/*',
+      '~/Desktop/item/rust/*',
     },
   },
   init = function()
