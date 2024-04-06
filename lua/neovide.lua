@@ -1,6 +1,7 @@
 if vim.g.neovide then
   -- 设置字体
   vim.o.guifont = 'JetBrainsMonoNL Nerd Font:h10'
+  -- vim.o.guifont = 'FiraCode Nerd Font Mono:h10:i'
   -- 设置窗口缩放
   vim.g.neovide_scale_factor = 2
   -- 设置窗口透明度
