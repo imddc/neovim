@@ -5,6 +5,7 @@ if vim.g.neovide then
   vim.g.neovide_scale_factor = 2
   -- 设置窗口透明度
   vim.g.neovide_transparency = 0.9
+  vim.g.transparency = 0.9
   -- 设置窗口模糊
   vim.g.neovide_window_blurred = true
   -- 设置字体
@@ -13,6 +14,7 @@ if vim.g.neovide then
   vim.g.neovide_remember_window_size = true
   -- 设置光标效果
   vim.g.neovide_cursor_vfx_mode = 'railgun'
+  vim.g.neovide_refresh_rate = 120
 
   -- dynamic scale
   local change_scale_factor = function(delta)
