@@ -37,10 +37,7 @@ return {
 
     -- volar
     lspconfig.volar.setup {
-      filetypes = {
-        'vue',
-      },
-      on_attach = on_attach,
+      capabilities = capabilities,
     }
 
     lspconfig.tsserver.setup {

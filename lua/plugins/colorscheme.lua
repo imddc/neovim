@@ -11,6 +11,19 @@ return {
 -- return {
 --   'loctvl842/monokai-pro.nvim',
 --   config = function()
---     require('monokai-pro').setup()
+--     vim.cmd [[colorscheme monokai-pro]]
+--     -- require('monokai-pro').setup()
+--   end,
+-- }
+-- return {
+--   'folke/tokyonight.nvim',
+--   lazy = false,
+--   priority = 1000,
+--   opts = {},
+--   config = function()
+--     vim.cmd [[colorscheme tokyonight-night]]
+--     -- vim.cmd [[colorscheme tokyonight-storm]]
+--     -- vim.cmd [[colorscheme tokyonight-day]]
+--     -- vim.cmd [[colorscheme tokyonight-moon]]
 --   end,
 -- }

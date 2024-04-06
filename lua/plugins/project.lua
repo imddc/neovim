@@ -2,12 +2,12 @@ return {
   'coffebar/neovim-project',
   opts = {
     projects = { -- define project roots
-      '~/workspace/*',
-      '~/.config/*',
-      '~/Desktop/item/front/*',
+      '~/.config/nvim',
       '~/Desktop/item/monorepo/*',
-      '~/Desktop/item/backend/*',
       '~/Desktop/item/electron/*',
+      '~/Desktop/item/front/*',
+      '~/Desktop/item/backend/*',
+      '~/Desktop/item/forks/*',
       '~/Desktop/item/rust/*',
     },
   },
