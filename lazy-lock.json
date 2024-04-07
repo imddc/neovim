@@ -19,6 +19,7 @@
   "git-blame.nvim": { "branch": "master", "commit": "a0282d05adbee80aaf4e2ff35b81b52940b67bed" },
   "gitsigns.nvim": { "branch": "main", "commit": "070875f9e4eb81eb20cb60996cd1d9086d94b05e" },
   "lazy.nvim": { "branch": "main", "commit": "31ddbea7c10b6920c9077b66c97951ca8682d5c8" },
+  "leetcode.nvim": { "branch": "master", "commit": "765cc76df77072e3ff4c3fdc256b9a244af73b6d" },
   "live-server.nvim": { "branch": "main", "commit": "0b4d31c665fa69b3e68d6da5765fab5ccf88b0c0" },
   "lorem.nvim": { "branch": "main", "commit": "e7a2b5b7ecd753c267a27c31c6b632b709ac234d" },
   "lspkind-nvim": { "branch": "master", "commit": "1735dd5a5054c1fb7feaf8e8658dbab925f4f0cf" },
