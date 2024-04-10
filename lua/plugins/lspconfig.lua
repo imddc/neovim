@@ -37,6 +37,7 @@ return {
 
     -- volar
     lspconfig.volar.setup {
+      on_attach = on_attach,
       capabilities = capabilities,
     }
 
@@ -46,7 +47,7 @@ return {
           {
             name = '@vue/typescript-plugin',
             -- location = '/usr/local/lib/node_modules/@vue/typescript-plugin',
-            -- volar 2 不会管理 .vue的 <script> 块中的 TypeScript
+            -- volar2 不会管理 .vue的 <script> 块中的 TypeScript
             -- 因此tsserver需要调用volar插件以认出 '.vue'
             location = '/opt/homebrew/lib/node_modules/@vue/typescript-plugin',
             languages = { 'javascript', 'typescript', 'vue' },
