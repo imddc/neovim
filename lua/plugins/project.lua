@@ -7,6 +7,7 @@ return {
       '~/Desktop/item/electron/*',
       '~/Desktop/item/front/*',
       '~/Desktop/item/backend/*',
+      '~/Desktop/item/test-demo',
       '~/Desktop/item/forks/*',
       '~/Desktop/item/rust/*',
     },

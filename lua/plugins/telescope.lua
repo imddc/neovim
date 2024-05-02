@@ -29,16 +29,23 @@ return {
         },
         dynamic_preview_title = true,
         path_display = { 'smart' },
+
+        -- layout
+        layout_strategy = 'horizontal',
+        layout_config = {
+          horizontal = {
+            preview_cutoff = 50,
+            preview_width = 0.5,
+          },
+          vertical = {
+            preview_cutoff = 20,
+            preview_width = 0.5,
+          },
+        },
       },
       pickers = {
         find_files = {
           hidden = true,
-        },
-      },
-      layout_config = {
-        horizontal = {
-          preview_cutoff = 100,
-          preview_width = 0.5,
         },
       },
     }

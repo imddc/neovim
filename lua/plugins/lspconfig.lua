@@ -65,19 +65,19 @@ return {
     }
 
     -- unocss
-    lspconfig.unocss.setup {
-      on_attach = on_attach,
-      cmd = {
-        'unocss-langurage-server',
-        '--stdio',
-      },
-      filetypes = {
-        'html',
-        'vue',
-        'javascriptreact',
-        'typescriptreact',
-      },
-    }
+    -- lspconfig.unocss.setup {
+    --   on_attach = on_attach,
+    --   cmd = {
+    --     'unocss-langurage-server',
+    --     '--stdio',
+    --   },
+    --   filetypes = {
+    --     'html',
+    --     'vue',
+    --     'javascriptreact',
+    --     'typescriptreact',
+    --   },
+    -- }
     -- tailwindcss
     lspconfig.tailwindcss.setup {
       on_attach = on_attach,
