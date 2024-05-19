@@ -24,8 +24,8 @@ keymap.set('n', '<leader>s', '<cmd>w<cr>')
 keymap.set('n', '<leader>nh', ':nohl<CR>', { desc = 'Clear search highlights' })
 
 --nvim tree
-keymap.set('n', '<leader>;', ':NvimTreeToggle<cr>')
-keymap.set('n', '<c-;>', ':NvimTreeFocus<cr>')
+-- keymap.set('n', '<leader>;', ':NvimTreeToggle<cr>')
+-- keymap.set('n', '<c-;>', ':NvimTreeFocus<cr>')
 
 -- bufferline
 -- keymap.set('n', '<c-h>', ':BufferLineCyclePrev<cr>')
