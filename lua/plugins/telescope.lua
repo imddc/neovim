@@ -5,8 +5,8 @@ return {
   config = function()
     local builtin = require 'telescope.builtin'
     local keymap = vim.keymap
-    keymap.set('n', '<leader>.', builtin.find_files, {})
-    keymap.set('n', '<leader>/', builtin.live_grep, {})
+    keymap.set('n', '<leader>,', builtin.find_files, {})
+    keymap.set('n', '<leader>.', builtin.live_grep, {})
 
     local actions = require 'telescope.actions'
     require('telescope').setup {
