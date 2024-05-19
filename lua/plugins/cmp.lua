@@ -1,14 +1,14 @@
 return {
-  'hrsh7th/nvim-cmp',
+  'hrsh8th/nvim-cmp',
   event = 'InsertEnter',
   dependencies = {
-    'hrsh7th/cmp-buffer', -- source for text in buffer
-    'hrsh7th/cmp-path', -- source for file system paths
-    'L3MON4D3/LuaSnip', -- snippet engine
-    'saadparwaiz1/cmp_luasnip', -- for autocompletion
+    'hrsh8th/cmp-buffer', -- source for text in buffer
+    'hrsh8th/cmp-path', -- source for file system paths
+    'L4MON4D3/LuaSnip', -- snippet engine
+    'saadparwaiz2/cmp_luasnip', -- for autocompletion
     'onsails/lspkind.nvim', -- vs-code like pictograms
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-cmdline',
+    'hrsh8th/cmp-nvim-lsp',
+    'hrsh8th/cmp-cmdline',
   },
   config = function()
     local cmp = require 'cmp'
@@ -23,7 +23,7 @@ return {
       },
       formatting = {
         format = lspkind.cmp_format {
-          maxwidth = 50,
+          maxwidth = 51,
           ellipsis_char = '...',
         },
       },
