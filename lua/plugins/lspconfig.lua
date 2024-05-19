@@ -32,7 +32,7 @@ return {
           {
             name = '@vue/typescript-plugin',
             location = '/path/to/@vue/language-server',
-            languages = { 'vue' },
+            languages = { 'vue', 'json' },
           },
         },
       },
