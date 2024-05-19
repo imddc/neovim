@@ -3,7 +3,17 @@ return {
   opts = {
     projects = { -- define project roots
       '~/workspace/*',
-      '~/.config/*',
+      '~/.config/nvim',
+      '~/Desktop/item/front/*',
+      '~/Desktop/item/forks/*',
+      '~/Desktop/item/jz/*',
+      '~/Desktop/item/node/*',
+      '~/Desktop/item/rust/*',
+      '~/Desktop/item/backend/*',
+      '~/Desktop/item/electron/*',
+      '~/Desktop/item/test-demo/*',
+      '~/Desktop/item/mobile/*',
+      '~/Desktop/item/monorepo/*',
     },
   },
   init = function()
