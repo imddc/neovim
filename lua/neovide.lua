@@ -1,21 +1,6 @@
 if vim.g.neovide then
-  -- 设置字体
-  vim.o.guifont = 'JetBrainsMonoNL Nerd Font:h10'
-  -- vim.o.guifont = 'FiraCode Nerd Font Mono:h10:i'
-  -- 设置窗口缩放
-  vim.g.neovide_scale_factor = 2
-  -- 设置窗口透明度
-  vim.g.neovide_transparency = 0.9
-  vim.g.transparency = 0.9
-  -- 设置窗口模糊
-  vim.g.neovide_window_blurred = true
-  -- 设置字体
-  vim.opt.linespace = 4
-  -- 设置窗口大小
-  vim.g.neovide_remember_window_size = true
-  -- 设置光标效果
-  vim.g.neovide_cursor_vfx_mode = 'railgun'
-  vim.g.neovide_refresh_rate = 120
+  vim.o.guifont = 'JetbrainsMono Nerd Font:h14:i'
+  vim.g.neovide_scale_factor = 1.6
 
   -- dynamic scale
   local change_scale_factor = function(delta)

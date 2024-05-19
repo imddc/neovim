@@ -24,7 +24,6 @@ return {
           'prisma',
           'markdown',
           'markdown_inline',
-          'vue',
         },
 
         sync_install = false,

@@ -33,5 +33,36 @@
       "}",
       "export default $1"
     ]
+  },
+  "tab": {
+    "prefix": "tab",
+    "description": "tab",
+    "body": [
+      "enum TabKind {",
+      "  SHOULD,",
+      "  COUNTED,",
+      "}",
+      "",
+      "",
+      "<TabProvider initialValue={TabKind.SHOULD}>",
+      "        <Tabs",
+      "          sx={{",
+      "            p: '0 24px',",
+      "          }}",
+      "        >",
+      "          <Tab",
+      "            label={'SHOULD'}",
+      "            value={TabKind.SHOULD}",
+      "          ></Tab>",
+      "          <Tab",
+      "            label={'COUNTED'}",
+      "            value={TabKind.COUNTED}",
+      "          ></Tab>",
+      "        </Tabs>",
+      "      </TabProvider>",
+      "",
+      "",
+      ""
+    ]
   }
 }
