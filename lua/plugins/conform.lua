@@ -6,6 +6,7 @@ return {
     require('conform').setup {
       formatters_by_ft = {
         lua = { 'stylua' },
+        vue = { 'prettierd' },
         javascript = { 'prettierd' },
         typescript = { 'prettierd' },
         javascriptreact = { 'prettierd' },

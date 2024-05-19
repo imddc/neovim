@@ -6,7 +6,7 @@ keymap.set('i', 'jj', '<ESC>')
 keymap.set('i', 'jk', '<ESC>')
 keymap.set('i', 'kk', '<ESC>')
 
-keymap.set('n', '<S-h>', '0')
+keymap.set('n', '<S-h>', '^')
 keymap.set('n', '<S-l>', '$')
 
 keymap.set('n', '<c-a>', 'ggVG')
@@ -22,10 +22,6 @@ keymap.set('n', '<leader>s', '<cmd>w<cr>')
 
 -- cancle highlights
 keymap.set('n', '<leader>nh', ':nohl<CR>', { desc = 'Clear search highlights' })
-
---nvim tree
--- keymap.set('n', '<leader>;', ':NvimTreeToggle<cr>')
--- keymap.set('n', '<c-;>', ':NvimTreeFocus<cr>')
 
 -- bufferline
 -- keymap.set('n', '<c-h>', ':BufferLineCyclePrev<cr>')
