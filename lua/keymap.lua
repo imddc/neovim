@@ -28,11 +28,11 @@ keymap.set('n', '<leader>;', ':NvimTreeToggle<cr>')
 keymap.set('n', '<c-;>', ':NvimTreeFocus<cr>')
 
 -- bufferline
-keymap.set('n', '<c-h>', ':BufferLineCyclePrev<cr>')
-keymap.set('n', '<c-l>', ':BufferLineCycleNext<cr>')
-keymap.set('n', '<c-s-h>', ':BufferLineMovePrev<cr>')
-keymap.set('n', '<c-s-l>', ':BufferLineMoveNext<cr>')
-keymap.set('n', "<c-'", ':BufferLineCloseOthers<cr>')
+-- keymap.set('n', '<c-h>', ':BufferLineCyclePrev<cr>')
+-- keymap.set('n', '<c-l>', ':BufferLineCycleNext<cr>')
+-- keymap.set('n', '<c-s-h>', ':BufferLineMovePrev<cr>')
+-- keymap.set('n', '<c-s-l>', ':BufferLineMoveNext<cr>')
+-- keymap.set('n', "<c-'", ':BufferLineCloseOthers<cr>')
 
 -- indent
 keymap.set('v', '<', '<gv')
