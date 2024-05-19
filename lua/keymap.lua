@@ -32,6 +32,6 @@ keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 keymap.set('n', '<c-h>', ':BufferLineCyclePrev<cr>')
 keymap.set('n', '<c-l>', ':BufferLineCycleNext<cr>')
 
--- project
+-- prjject
 keymap.set('n', '<leader>d', '<CMD>Telescope neovim-project discover<CR>', {})
 keymap.set('n', '<leader>h', '<CMD>Telescope neovim-project history<CR>', {})
