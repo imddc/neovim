@@ -5,13 +5,22 @@ if vim.g.neovide then
 
   -- cursor animate
   vim.g.neovide_cursor_vfx_mode = 'railgun'
-  vim.g.neovide_cursor_trail_size = 0.8
-  vim.g.neovide_cursor_animate_in_insert_mode = true
-  vim.g.neovide_cursor_vfx_particle_lifetime = 2
-  vim.g.neovide_cursor_vfx_particle_density = 10.0
-  vim.g.neovide_cursor_vfx_particle_speed = 10.0
-  vim.g.neovide_cursor_vfx_particle_phase = 1.5
-  vim.g.neovide_cursor_vfx_particle_curl = 1.0
+
+  vim.g.neovide_transparency = 0.8
+
+  vim.o.guifont = 'JetbrainsMono Nerd Font:h14:i'
+  vim.opt.linespace = 2
+
+  -- padding
+  vim.g.neovide_padding_top = 0
+  vim.g.neovide_padding_bottom = 0
+  vim.g.neovide_padding_right = 0
+  vim.g.neovide_padding_left = 0
+
+  -- window
+  vim.g.neovide_window_blurred = true
+  vim.g.neovide_floating_blur_amount_x = 0.5
+  vim.g.neovide_floating_blur_amount_y = 0.5
 
   -- dynamic scale
   local change_scale_factor = function(delta)
