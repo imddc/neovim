@@ -24,11 +24,12 @@ keymap.set('n', '<leader>s', '<cmd>w<cr>')
 keymap.set('n', '<leader>nh', ':nohl<CR>', { desc = 'Clear search highlights' })
 
 -- bufferline
--- keymap.set('n', '<c-h>', ':BufferLineCyclePrev<cr>')
--- keymap.set('n', '<c-l>', ':BufferLineCycleNext<cr>')
--- keymap.set('n', '<c-s-h>', ':BufferLineMovePrev<cr>')
--- keymap.set('n', '<c-s-l>', ':BufferLineMoveNext<cr>')
--- keymap.set('n', "<c-'", ':BufferLineCloseOthers<cr>')
+keymap.set('n', '<c-h>', ':BufferLineCyclePrev<cr>')
+keymap.set('n', '<c-l>', ':BufferLineCycleNext<cr>')
+keymap.set('n', '<c-s-h>', ':BufferLineMovePrev<cr>')
+keymap.set('n', '<c-s-l>', ':BufferLineMoveNext<cr>')
+keymap.set('n', "<c-'>", ':BufferLineCloseOthers<cr>')
+keymap.set('n', '<leader>q', ':BufferLinePickClose<cr>')
 
 -- indent
 keymap.set('v', '<', '<gv')
