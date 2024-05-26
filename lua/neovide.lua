@@ -6,7 +6,7 @@ if vim.g.neovide then
   -- cursor animate
   vim.g.neovide_cursor_vfx_mode = 'railgun'
 
-  vim.g.neovide_transparency = 0.8
+  vim.g.neovide_transparency = 0.9
 
   vim.o.guifont = 'JetbrainsMono Nerd Font:h14:i'
   vim.opt.linespace = 2
