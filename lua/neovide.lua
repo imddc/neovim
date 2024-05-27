@@ -1,14 +1,22 @@
 if vim.g.neovide then
-  vim.o.guifont = 'JetbrainsMono Nerd Font:h14:i'
-  vim.g.neovide_scale_factor = 1.5
+  vim.o.guifont = 'JetbrainsMono Nerd Font:h14:t'
+  vim.g.neovide_scale_factor = 1.6
   vim.g.neovide_window_bluerred = true
 
-  -- cursor animate
-  vim.g.neovide_cursor_vfx_mode = 'railgun'
+  -- 启用 Neovide 光标动效，选择 wireframe 模式
+  vim.g.neovide_cursor_vfx_mode = 'torpedo'
+  -- vim.g.neovide_cursor_vfx_mode = 'railgun'
+  -- vim.g.neovide_cursor_vfx_mode = 'wireframe'
+
+  -- 其他可选配置，可以根据需要调整
+  vim.g.neovide_cursor_vfx_particle_lifetime = 1.2
+  vim.g.neovide_cursor_vfx_particle_density = 12.0
+  vim.g.neovide_cursor_vfx_particle_speed = 10.0
+  vim.g.neovide_cursor_vfx_particle_phase = 1.5
+  vim.g.neovide_cursor_vfx_particle_curl = 1.0
 
   vim.g.neovide_transparency = 0.9
 
-  vim.o.guifont = 'JetbrainsMono Nerd Font:h14:i'
   vim.opt.linespace = 2
 
   -- padding
