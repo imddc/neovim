@@ -1,9 +1,9 @@
 return {
   'neovim/nvim-lspconfig',
-  'b0o/schemastore.nvim',
+  -- 'b0o/schemastore.nvim',
   config = function()
     local lspconfig = require 'lspconfig'
-    local schemastore = require 'schemastore'
+    -- local schemastore = require 'schemastore'
 
     -- graphql
     lspconfig.graphql.setup {
@@ -14,14 +14,14 @@ return {
     }
 
     -- json
-    lspconfig.jsonls.setup {
-      settings = {
-        json = {
-          schemas = schemastore.json.schemas(),
-          validate = { enable = true },
-        },
-      },
-    }
+    -- lspconfig.jsonls.setup {
+    --   settings = {
+    --     json = {
+    --       -- schemas = schemastore.json.schemas(),
+    --       validate = { enable = true },
+    --     },
+    --   },
+    -- }
 
     -- lua
     lspconfig.lua_ls.setup {

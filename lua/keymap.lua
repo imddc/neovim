@@ -9,7 +9,7 @@ keymap.set('i', 'kk', '<ESC>')
 keymap.set('n', '<S-h>', '^')
 keymap.set('n', '<S-l>', '$')
 
-keymap.set('n', '<c-a>', 'ggVG')
+keymap.set('n', '<c-s-a>', 'ggVG')
 
 keymap.set('n', 'x', '"_x')
 keymap.set('n', 'dw', 'vb"_d')
