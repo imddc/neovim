@@ -1,6 +1,13 @@
 return {
   'neovim/nvim-lspconfig',
   -- 'b0o/schemastore.nvim',
+  servers = {
+    eslint = {
+      settings = {
+        workingDirectories = { mode = 'auto' },
+      },
+    },
+  },
   config = function()
     local lspconfig = require 'lspconfig'
     -- local schemastore = require 'schemastore'
