@@ -38,6 +38,14 @@ return {
           preview_width = 0.5,
         },
       },
+      extensions = {
+        package_info = {
+          -- Optional theme (the extension doesn't set a default theme)
+          theme = 'ivy',
+        },
+      },
     }
+
+    require('telescope').load_extension 'package_info'
   end,
 }
