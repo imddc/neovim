@@ -1,5 +1,6 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
+  "LazyVim": { "branch": "main", "commit": "da7b7738eb84b00c949f48afabebd39266e61d75" },
   "LuaSnip": { "branch": "master", "commit": "878ace11983444d865a72e1759dbcc331d1ace4c" },
   "SmoothCursor.nvim": { "branch": "main", "commit": "d60c1995b13e5d8c446c78a850fe8a587fa0ddd6" },
   "alternate-toggler": { "branch": "main", "commit": "fe798aa9e4af26c9e33ca1add9d255209d03b108" },
@@ -17,6 +18,7 @@
   "friendly-snippets": { "branch": "main", "commit": "dd2fd1281d4b22e7b4a5bfafa3e142d958e251f2" },
   "git-blame.nvim": { "branch": "master", "commit": "fb84fad97cd4b51caee3c865e8a33a0d413b77a8" },
   "lazy.nvim": { "branch": "main", "commit": "24fa2a97085ca8a7220b5b078916f81e316036fd" },
+  "lsp_signature.nvim": { "branch": "master", "commit": "2ec2ba23882329c1302dff773b0d3620371d634f" },
   "lspkind.nvim": { "branch": "master", "commit": "1735dd5a5054c1fb7feaf8e8658dbab925f4f0cf" },
   "lspsaga.nvim": { "branch": "main", "commit": "200256d256ca596812b2ee6374244bb4dfe6974e" },
   "lualine-so-fancy.nvim": { "branch": "main", "commit": "135363fc3cc29efd8e804e872f22d033ea6d87ad" },
