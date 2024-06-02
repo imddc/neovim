@@ -3,8 +3,8 @@ local keymap = vim.keymap
 
 -- esc
 keymap.set('i', 'jj', '<ESC>')
-keymap.set('i', 'jk', '<ESC>')
-keymap.set('i', 'kk', '<ESC>')
+-- keymap.set('i', 'jk', '<ESC>')
+-- keymap.set('i', 'kk', '<ESC>')
 
 keymap.set('n', '<S-h>', '^')
 keymap.set('n', '<S-l>', '$')

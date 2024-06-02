@@ -1,6 +1,11 @@
 if vim.g.neovide then
-  vim.o.guifont = 'JetbrainsMono Nerd Font:h14:t'
-  vim.g.neovide_scale_factor = 1.6
+  vim.o.guifont = 'JetbrainsMono Nerd Font:h20:i'
+  -- vim.o.guifont = 'FiraCode Nerd Font Mono:h20:i'
+  -- vim.o.guifont = 'Maple Mono:h20'
+  -- vim.o.guifont = 'CaskaydiaCove Nerd Font Mono:h22:i'
+  -- line height
+  vim.opt.linespace = 2
+  -- vim.g.neovide_scale_factor = 1.6
   vim.g.neovide_window_bluerred = true
 
   -- 启用 Neovide 光标动效，选择 wireframe 模式
@@ -16,8 +21,6 @@ if vim.g.neovide then
   vim.g.neovide_cursor_vfx_particle_curl = 1.0
 
   vim.g.neovide_transparency = 0.9
-
-  vim.opt.linespace = 2
 
   -- padding
   vim.g.neovide_padding_top = 0
