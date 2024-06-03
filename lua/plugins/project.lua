@@ -3,7 +3,7 @@ return {
   opts = {
     projects = { -- define project roots
       '~/workspace/*',
-      '~/.config/nvim',
+      '~/.config/*',
       '~/Desktop/item/front/*',
       '~/Desktop/item/forks/*',
       '~/Desktop/item/jz/*',
