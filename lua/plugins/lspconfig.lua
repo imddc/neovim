@@ -8,9 +8,14 @@ return {
       },
     },
   },
+  inlay_hints = {
+    enabled = true,
+  },
+  codelens = {
+    enabled = false,
+  },
   config = function()
     local lspconfig = require 'lspconfig'
-    -- local schemastore = require 'schemastore'
 
     -- graphql
     lspconfig.graphql.setup {
@@ -19,16 +24,6 @@ return {
         'gql',
       },
     }
-
-    -- json
-    -- lspconfig.jsonls.setup {
-    --   settings = {
-    --     json = {
-    --       -- schemas = schemastore.json.schemas(),
-    --       validate = { enable = true },
-    --     },
-    --   },
-    -- }
 
     -- lua
     lspconfig.lua_ls.setup {
@@ -49,22 +44,11 @@ return {
       color_square_width = 2,
     }
 
-    -- If you are using mason.nvim, you can get the ts_plugin_path like this
-    -- local mason_registry = require('mason-registry')
-    -- local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path() .. '/node_modules/@vue/language-server'
-    lspconfig.tsserver.setup {
-      init_options = {
-        plugins = {
-          {
-            name = '@vue/typescript-plugin',
-            location = '/path/to/@vue/language-server',
-            languages = { 'vue', 'json' },
-          },
-        },
-      },
-    }
-
+    -- volar 只管vue ts-tools 负责全部js/ts
     lspconfig.volar.setup {
+      filetypes = {
+        'vue',
+      },
       init_options = {
         vue = {
           hybridMode = false,

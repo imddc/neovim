@@ -6,13 +6,13 @@ keymap.set('i', 'jj', '<ESC>')
 -- keymap.set('i', 'jk', '<ESC>')
 -- keymap.set('i', 'kk', '<ESC>')
 
-keymap.set('n', '<S-h>', '^')
-keymap.set('n', '<S-l>', '$')
-
 keymap.set('n', '<c-s-a>', 'ggVG')
 
 keymap.set('n', 'x', '"_x')
 keymap.set('n', 'dw', 'vb"_d')
+
+keymap.set('n', 'H', '^')
+keymap.set('n', 'L', '$')
 
 -- space + s  => save
 keymap.set('n', '<leader>s', '<cmd>w<cr>')
@@ -28,7 +28,7 @@ keymap.set('n', '<c-h>', ':BufferLineCyclePrev<cr>')
 keymap.set('n', '<c-l>', ':BufferLineCycleNext<cr>')
 keymap.set('n', '<c-s-h>', ':BufferLineMovePrev<cr>')
 keymap.set('n', '<c-s-l>', ':BufferLineMoveNext<cr>')
-keymap.set('n', "<c-'>", ':BufferLineCloseOthers<cr>')
+keymap.set('n', "<leader>'", ':BufferLineCloseOthers<cr>')
 keymap.set('n', '<leader>q', ':BufferLinePickClose<cr>')
 
 -- indent
